@@ -1,0 +1,38 @@
+{
+  "app": {
+    "signup": {
+      "left": {
+        "title": "Let's create an account!",
+        "subtitle": "Signing up to Bookisia is fast and free - no commitments and long-term contracts",
+        "form": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "email_address": "Email Address",
+          "password": "Password",
+          "signup": "Sign Up"
+        },
+        "existing_account_question": "Already have an account?",
+        "sign_in": "Sign in"
+      },
+      "right": {
+        "title": "Explore premium features with your free 30-day Teams plan trial",
+        "features": [
+          "Business Booking Website",
+          "Add Staff",
+          "SMS Notifications",
+          "Customized schedule for each staff",
+          "Phone and email support"
+        ],
+        "call_to_action": "Let's partner together for your success!"
+      }
+    }
+  },
+  "validations" : {
+    "firstname_required": "Firstname is required",
+    "lastname_required": "Lastname is required",
+    "email_required": "Email is required",
+    "valid_email_required": "A valid email is required",
+    "password_required": "Password is required",
+    "minimum_password_length": "The minimum password length is {minimum_length}"
+  }
+}

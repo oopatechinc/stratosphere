@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+      - TAG="latest"
+      - IMAGE_URI="${REPOSITORY_URI}:${TAG}"
+      - aws s3 cp s3://bookisia-private/env_files/frontpage/frontpage.staging.env .env
+      - aws s3 cp s3://bookisia-private/env_files/github/github.npmrc .npmrc
+  build:
+    commands:
+      - docker build --tag "$IMAGE_URI" .
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push "$IMAGE_URI"
+      - printf '[{"name":"bookisia-frontpage","imageUri":"%s"}]' "$IMAGE_URI" > imagedefinitions.json
+artifacts:
+  files: imagedefinitions.json

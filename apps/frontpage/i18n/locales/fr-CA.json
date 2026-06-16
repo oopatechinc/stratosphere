@@ -1,0 +1,38 @@
+{
+  "app": {
+    "signup": {
+      "left": {
+        "title": "Créons un compte !",
+        "subtitle": "L'inscription à Bookisia est rapide et gratuite - sans engagement ni contrats à long terme",
+        "form": {
+          "firstname": "Prénom",
+          "lastname": "Nom de famille",
+          "email_address": "Adresse e-mail",
+          "password": "Mot de passe",
+          "signup": "S'inscrire"
+        },
+        "existing_account_question": "Vous avez déjà un compte ?",
+        "sign_in": "Se connecter"
+      },
+      "right": {
+        "title": "Explorez les fonctionnalités premium avec votre essai gratuit de 30 jours au plan Équipes",
+        "features": [
+          "Site Web de réservation d'entreprise",
+          "Ajouter du personnel",
+          "Notifications par SMS",
+          "Horaire personnalisé pour chaque membre du personnel",
+          "Support par téléphone et e-mail"
+        ],
+        "call_to_action": "Collaborons ensemble pour votre succès !"
+      }
+    }
+  },
+  "validations" : {
+    "firstname_required": "Le prénom est requis",
+    "lastname_required": "Le nom de famille est requis",
+    "email_required": "L'e-mail est requis",
+    "valid_email_required": "Un e-mail valide est requis",
+    "password_required": "Le mot de passe est requis",
+    "minimum_password_length": "La longueur minimale du mot de passe est {minimum_length}"
+  }
+}

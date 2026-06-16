@@ -1,0 +1,17 @@
+export type Address = {
+  id?: number,
+  country_id?: number,
+  state_id?: number,
+  addressable_id?: number,
+  addressable_type?: string,
+  hide_address?: boolean,
+  address_line_1?: string,
+  address_line_2?: string,
+  city?: string,
+  postal_code?: string,
+  full_address?: string,
+  gmaps_full_address?: string,
+  gmaps_place_id?: string,
+  gmaps_longitude?: string,
+  gmaps_latitude?: string,
+}

@@ -1,0 +1,22 @@
+{
+  "name": "stratosphere",
+  "version": "1.0.0",
+  "packageManager": "pnpm@11.6.0",
+  "private": true,
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo run dev --filter=\"./apps/*\"",
+    "prepare": "turbo run prepare",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

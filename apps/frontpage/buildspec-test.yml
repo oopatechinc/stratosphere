@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 24
+  pre_build:
+    commands:
+      - echo Installing npm packages...
+  build:
+    commands:
+      - echo run tests...
+reports:
+  jest_reports:
+    files:
+      - junit.xml
+    file-format: JUNITXML

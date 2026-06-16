@@ -1,0 +1,29 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+      - TAG="latest"
+      - IMAGE_URI="${REPOSITORY_URI}:${TAG}"
+      - aws s3 cp s3://bookisia-private/env_files/frontpage/frontpage.production.env .env
+      - aws s3 cp s3://bookisia-private/env_files/github/github.npmrc .npmrc
+  build:
+    commands:
+      - docker build --tag "$IMAGE_URI" .
+  post_build:
+    commands:
+      - echo Pushing the Docker image...
+      - docker push "$IMAGE_URI"
+      - echo Container image to be used "$IMAGE_URI"
+      - printf '[{"name":"bookisia-frontpage","imageUri":"%s"}]' "$IMAGE_URI" > imagedefinitions.json
+      - sed -i "s|IMAGE_URI|${IMAGE_URI}|g" taskdef.json
+      - sed -i "s|TASK_ROLE_ARN|${TASK_ROLE_ARN}|g" taskdef.json
+      - sed -i "s|EXECUTION_ROLE_ARN|${EXECUTION_ROLE_ARN}|g" taskdef.json
+      - sed -i "s|TASK_DEFINITION_ARN|${TASK_DEFINITION_ARN}|g" appspec.yaml
+      - cat appspec.yaml && cat taskdef.json
+artifacts:
+  files:
+    - imagedefinitions.json
+    - appspec.yaml
+    - taskdef.json

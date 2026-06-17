@@ -1,0 +1,477 @@
+{
+  "app": {
+    "forms": {
+      "person": {
+        "first_name": "First Name",
+        "last_name": "Last Name",
+        "email": "Email",
+        "phone_number": "Phone Number",
+        "password": "Password",
+        "validations": {
+          "first_name_required": "First name is required",
+          "last_name_required": "Last name is required",
+          "phone_number_required": "Phone number is required",
+          "email_required": "Email is required",
+          "valid_email_required": "A valid email is required",
+          "password_required": "Password is required",
+          "minimum_password_length": "The minimum password length is {minimum_length}"
+        }
+      }
+    },
+    "signup": {
+      "left": {
+        "title": "Let's create an account!",
+        "subtitle": "Signing up to Bookisia is fast and free - no commitments and long-term contracts",
+        "form": {
+          "firstname": "First Name",
+          "lastname": "Last Name",
+          "email_address": "Email Address",
+          "password": "Password",
+          "signup": "Sign Up"
+        },
+        "existing_account_question": "Already have an account?",
+        "sign_in": "Sign in"
+      },
+      "right": {
+        "title": "Explore premium features with your free 30-day Teams plan trial",
+        "features": [
+          "Business Booking Website",
+          "Add Staff",
+          "SMS Notifications",
+          "Customized schedule for each staff",
+          "Phone and email support"
+        ],
+        "call_to_action": "Let's partner together for your success!"
+      }
+    },
+    "signin": {
+      "title": "Sign in to your account!",
+      "username_placeholder": "Email Address",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot password?",
+      "no_account_text": "Don't have an account?",
+      "turnstile": {
+        "validation_error": "Verification failed. Please refresh and try again!"
+      }
+    },
+    "forgot_password": {
+      "send": {
+        "title": "Password Reset",
+        "subtitle": "Please enter the email address associated with your account and we will email you a password reset verification code."
+      },
+      "verify": {
+        "title": "Verification Code",
+        "subtitle": "Please enter the verification code that was sent to your email."
+      },
+      "update": {
+        "title": "Reset Password",
+        "subtitle": "Please enter your new password."
+      },
+      "forms": {
+        "new_password": "New password",
+        "confirm_password": "Confirm password",
+        "validations": {
+          "new_password": "New password is required",
+          "confirm_password": "Confirm password is required",
+          "verification_code": "Verification code is required"
+        }
+      },
+      "confirm_password": "Confirm new password",
+      "notify": {
+        "unable_to_verify": "Unable to verify code",
+        "enter_code": "Please enter the verification code sent to the provided email.",
+        "unable_to_update": "Unable to update password"
+      }
+    },
+    "navigation_drawer": {
+      "home": "Home",
+      "calendar": "Calendar",
+      "catalog": "Catalog",
+      "staff": "Staff",
+      "online": "Online",
+      "services": "Services",
+      "categories": "Categories",
+      "team_members": "Team members",
+      "permissions": "Permissions",
+      "integrations": "Integrations",
+      "settings": "Settings",
+      "profile": "Profile",
+      "personal_information": "Personal Information",
+      "my_business": "My Business",
+      "locations": "Locations",
+      "about": "About",
+      "logout": "Logout",
+      "agent": "Agent",
+      "properties": "Properties"
+    },
+    "dashboard": {
+      "latest_appointments": {
+        "title": "Upcoming Appointments",
+        "action_btn": "View Calendar",
+        "subtitle": "No new appointments"
+      },
+      "trial_expiration_counter": {
+        "title": "You have {days} days left to explore Bookisia for free",
+        "subtitle": "You're trialing our solo plan. You won't be charged until you subscribe",
+        "action_btn": "Choose Plan"
+      },
+      "quick_actions": {
+        "title": "Quick Actions",
+        "actions": {
+          "1": {
+            "title": "View Your Locations",
+            "subtitle": "Locations are places where you conduct your business"
+          },
+          "2": {
+            "title": "Open Your Website",
+            "subtitle": "Visit your primary website"
+          }
+        }
+      },
+      "sales_chart": {
+        "filters": {
+          "1": {
+            "text": "Weekly Income"
+          },
+          "2": {
+            "text": "Monthly Income"
+          },
+          "3": {
+            "title": "Last 3 months",
+            "text": "Last 3 Months Income"
+          }
+        }
+      }
+    },
+    "calendar": {
+      "4day": "4 Days",
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "view": "View",
+      "stack": "Stack",
+      "column": "Column",
+      "event_overlap_mode": "Event Overlap Mode",
+      "today": "Today",
+      "weekdays": "Weekdays",
+      "sun_sat": "Sun - Sat",
+      "mon_sun": "Mon - Sun",
+      "mon_fri": "Mon - Fri",
+      "mon_wed_fri": "Mon, Wed, Fri"
+    },
+    "sites": {
+      "index": {
+        "action_btn": "Create Website",
+        "external_btn": "Open Location Website",
+        "select_label": "Choose Location"
+      },
+      "create_website": {
+        "create_your": "Create your",
+        "subtext": "Your website is your place to showcase all that your business has to offer. Let's get you started by selecting the theme that works for your business",
+        "action_btn": "Create Website"
+      },
+      "templates": {
+        "title": "Select Website Template",
+        "preview_text": "Preview",
+        "edit_text": "Edit"
+      }
+    },
+    "services": {
+      "action_btn": "Create Service",
+      "explanation": "Selling your time? Create and sell services with a duration.",
+      "form": {
+        "add_title": "Add New Service",
+        "edit_title": "Edit Service",
+        "service_image": "Service Image",
+        "service_name": "Service Name",
+        "variations_text": "Create multiple variations of a single service. Set different pricing options, durations and more"
+      }
+    },
+    "categories": {
+      "action_btn": "Create Category",
+      "explanation": "Categories help organize the items in your catalog."
+    },
+    "integrations": {
+      "revoke_btn": "Revoke Access",
+      "connected_by": "Connected by",
+      "google-meet": {
+        "card": {
+          "title": "Google Meet",
+          "description": "Include Google Meet details in your Bookisia events"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Google Meet Information",
+            "subtitle": "With your connected Google Meet, you can:",
+            "action_btn": "Connect Google Meet",
+            "features": [
+              "Automatically create Google meetings at the time an event is scheduled",
+              "Instantly share unique conferencing details upon confirmation."
+            ],
+            "requirements": [
+              "A Gmail account"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Congratulations! You can already schedule with Google Meet conferencing because your Google calendar is connected with Bookisia.",
+          "calendar_select_title": "Calendar to add events to"
+        },
+        "notifications": {
+          "update_success": "Calendar successfully updated",
+          "revoke_success" : "Calendar access is now revoked",
+          "revoke_failed" : "Unable to revoke Calendar access. Please try again"
+        }
+      },
+      "google-calendar": {
+        "card": {
+          "title": "Google Calendar",
+          "description": "Add events to your calendar and prevent double-booking"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Google Calendar Information",
+            "subtitle": "With your connected Google Calendar, you can:",
+            "action_btn": "Connect Google Calendar",
+            "features": [
+              "Automatically add events to your Google Calendar",
+              "Prevent double-booking by automating events creation"
+            ],
+            "requirements": [
+              "A Gmail account"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Congratulations! Your Google Calendar is connected with Bookisia.",
+          "calendar_select_title": "Calendar to add events to"
+        },
+        "notifications": {
+          "update_success": "Calendar successfully updated",
+          "revoke_success" : "Calendar access is now revoked",
+          "revoke_failed" : "Unable to revoke Calendar access. Please try again"
+        }
+      },
+      "zoom": {
+        "card": {
+          "title": "Zoom",
+          "description": "Include Zoom details in your Bookisia events"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Zoom Information",
+            "subtitle": "With your connected Zoom account, you can:",
+            "action_btn": "Connect Zoom",
+            "features": [
+              "Automatically create Zoom meetings at the time an event is scheduled",
+              "Instantly share unique conferencing details upon confirmation"
+            ],
+            "requirements": [
+              "A Zoom account"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Congratulations! Your Zoom account is connected with Bookisia."
+        },
+        "notifications": {
+          "update_success": "Zoom successfully updated",
+          "revoke_success" : "Zoom access is now revoked",
+          "revoke_failed" : "Unable to revoke Zoom access. Please try again"
+        }
+      },
+      "stripe": {
+        "card": {
+          "title": "Stripe",
+          "description": "Collect payments before your appointments"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Stripe Information",
+            "subtitle": "With your connected Stripe account, you can:",
+            "action_btn": "Connect Stripe",
+            "features": [
+              "Collect payment before your appointment begins",
+              "Get money deposited in your account within 2-3 business days"
+            ],
+            "requirements": [
+              "A Stripe account"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Congratulations! Your Stripe account is connected with Bookisia."
+        },
+        "notifications": {
+          "update_success": "Stripe successfully updated",
+          "revoke_success" : "Stripe access is now revoked",
+          "revoke_failed" : "Unable to revoke Stripe access. Please try again"
+        }
+      }
+    },
+    "team_members": {
+      "page_title": "Team members",
+      "solo_staff": "Team member",
+      "action_btn": "Add Team Member"
+    },
+    "account": {
+      "language_preferences": "Language Preferences",
+      "timezone_preferences": "Timezone Preferences",
+      "select_language": "Select Language",
+      "select_timezone": "Select Timezone"
+    },
+    "locations": {
+      "index": {
+        "create_card": {
+          "title": "Business Location",
+          "subtitle": "Business locations for address and opening hours.",
+          "action_btn": "Create Location"
+        }
+      },
+      "form" : {
+        "add_title": "Add New Location",
+        "edit_title": "Edit New Location",
+        "nickname": "Nickname",
+        "website_url": "Website Url",
+        "type": "Type",
+        "contact_information": "Contact Information",
+        "social_contact": {
+          "title": "Social Contact"
+        },
+        "branding": {
+          "subtitle": "Customize your customer facing touchpoints like receipts, invoices, appointment booking flow, and checkout screens with your brand’s color and logo.",
+          "action_btn": "Apply Branding"
+        },
+        "business_hours": {
+          "title": "Business Hours",
+          "opens_at": "Opens at",
+          "closes_at": "Closes at",
+          "closed": "Closed",
+          "add_new_time": "Add new time",
+          "confirm_action": {
+            "title": "Confirm Action",
+            "text": "You are about to be redirected to the new service creation page. You will loose your current form progress. Do you want to continue?"
+          }
+        },
+        "services": {
+          "subtitle": "Choose the services you want to associate with this location"
+        },
+        "staff": {
+          "title": "Staff",
+          "subtitle": "Choose the team members you want to associate with this location\n\n"
+        }
+      }
+    },
+    "subscription": {
+      "action_btn": "Subscribe",
+      "explanation": "Select the right subscription plan for your business ",
+      "expiration_date": "Expiration date",
+      "payment_method": "Payment method",
+      "manage_plan": "Manage Plan",
+      "ongoing": "Ongoing",
+      "card": "Card",
+      "active_plan": "Active Plan",
+      "cancel_plan": "Cancel Plan",
+      "form": {
+        "add_title": "Add New Subscription",
+        "edit_title": "Edit Service"
+      }
+    },
+    "days": {
+      "Monday": "Monday",
+      "Tuesday": "Tuesday",
+      "Wednesday": "Wednesday",
+      "Thursday": "Thursday",
+      "Friday": "Friday",
+      "Saturday": "Saturday",
+      "Sunday": "Sunday"
+    },
+    "dictionary": {
+      "active": "Active",
+      "add": "Add",
+      "address": "Address",
+      "branding": "Branding",
+      "categories": "Categories",
+      "cancel": "Cancel",
+      "city": "City",
+      "connected": "Connected",
+      "continue": "Continue",
+      "day": "Day",
+      "description": "Description",
+      "discover": "Discover",
+      "duration": "Duration",
+      "edit": "Edit",
+      "email": "Email",
+      "first": "First",
+      "inactive": "Inactive",
+      "integrations": "Integrations",
+      "job": "Job",
+      "jobs": "Jobs",
+      "manage": "Manage",
+      "month": "Month",
+      "name": "Name",
+      "opening_hours": "Opening Hours",
+      "password": "Password",
+      "permission": "Permission",
+      "permissions": "Permissions",
+      "personal_information": "Personal Information",
+      "price": "Price",
+      "remove": "Remove",
+      "requirements": "Requirements",
+      "save": "Save",
+      "send": "Send",
+      "services": "Services",
+      "sign_in": "Sign in",
+      "sign_up": "Sign up",
+      "staff": "Staff",
+      "submit": "Submit",
+      "subscribe": "Subscribe",
+      "subscription": "Subscription",
+      "subscriptions": "Subscriptions",
+      "template": "Template",
+      "time_blocks": "Time Blocks",
+      "variations": "Variations",
+      "update": "Update",
+      "upload": "Upload",
+      "website": "Website",
+      "websites": "Websites",
+      "week": "Week"
+    },
+    "address": {
+      "address_line": "Address line {address_line}",
+      "city": "City",
+      "province": "Province",
+      "post_code": "Post code",
+      "country": "Country",
+      "validations": {
+        "country": "Country is required",
+        "address": "Address is required",
+        "city": "City is required",
+        "province": "Province is required",
+        "post_code": "Post code is required"
+      }
+    },
+    "multi_words": {
+      "phone_number": "Phone number"
+    },
+    "properties": {
+      "title": "Properties",
+      "action_btn": "Create Property",
+      "explanation": "Have a new property listing? Create the property and display on your website.",
+      "form": {
+        "add_title": "Add New Property",
+        "edit_title": "Edit Property",
+        "property_image": "Property Image",
+        "property_name": "Property Name",
+        "number_of_rooms": "Number of rooms",
+        "number_of_beds": "Number of beds",
+        "number_of_baths": "Number of baths",
+        "validations": {
+          "property_name_required": "Property name is required",
+          "property_description_required": "Property description is required",
+          "property_address_required": "Property address is required"
+        }
+      }
+    }
+  }
+}

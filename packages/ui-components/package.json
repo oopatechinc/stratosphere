@@ -16,6 +16,8 @@
     "nuxt": "catalog:",
     "vuetify": "catalog:",
     "vuetify-nuxt-module": "catalog:",
+    "@nuxtjs/i18n": "catalog:",
+    "dayjs-nuxt": "catalog:",
     "@stratosphere/core-layer": "workspace:*"
   },
   "devDependencies": {

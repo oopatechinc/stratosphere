@@ -1,0 +1,32 @@
+{
+  "name": "@stratosphere/admin-dashboard",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "catalog:",
+    "@nuxtjs/turnstile": "catalog:",
+    "@stratosphere/core-layer": "workspace:*",
+    "@stratosphere/ui-components": "workspace:*",
+    "crypto-js": "catalog:",
+    "dayjs-nuxt": "catalog:",
+    "echarts": "catalog:",
+    "lodash-es": "catalog:",
+    "nuxt": "catalog:",
+    "nuxt-auth-sanctum": "catalog:",
+    "nuxt-echarts": "catalog:",
+    "pinia": "catalog:",
+    "v-phone-input": "catalog:",
+    "vue": "catalog:",
+    "vue-echarts": "catalog:",
+    "vue-router": "catalog:",
+    "vuetify": "catalog:",
+    "@types/lodash-es": "catalog:"
+  }
+}

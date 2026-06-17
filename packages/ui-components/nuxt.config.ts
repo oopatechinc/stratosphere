@@ -6,15 +6,19 @@ export default defineNuxtConfig({
   modules: ['vuetify-nuxt-module'],
   vuetify: {
     moduleOptions: {
-      /* nuxt-vuetify module specific options */
     },
     vuetifyOptions: {
-      /* native vuetify options */
+      directives: true,
       theme: {
         defaultTheme: 'light',
-        // themes: { ... }
       }
     }
+  },
+  build: {
+    transpile: [
+      'v-phone-input',
+      'vuetify'
+    ],
   },
   // Explicitly tell Nuxt to inherit and pass through imports from extended layers
   imports: {

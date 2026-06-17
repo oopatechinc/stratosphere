@@ -1,0 +1,44 @@
+<script setup lang="ts">
+
+import {useTenantStore} from "#imports";
+
+const localePath = useLocalePath()
+const {logout} = useSanctumAuth()
+const {tenant} = useTenantStore()
+</script>
+
+<template>
+  <div>
+    <VNavigationDrawer permanent>
+      <template #prepend>
+        <VBtn
+            variant="outlined"
+            class="ma-4"
+            prepend-icon="mdi-account"
+            append-icon="mdi-chevron-right"
+            :text="tenant?.name"
+            :to="localePath('/dashboard/business/about')"
+        />
+      </template>
+
+      <VDivider/>
+
+      <NavNavigationDrawerRoutes />
+
+      <template #append>
+        <div class="pa-3">
+          <LocaleSwitcher/>
+          <VBtn color="primary" block @click="logout">{{$t('app.navigation_drawer.logout')}}</VBtn>
+        </div>
+      </template>
+    </VNavigationDrawer>
+  </div>
+
+</template>
+
+<style scoped>
+a {
+  color: black;
+  text-decoration: none;
+}
+</style>

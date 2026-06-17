@@ -1,0 +1,456 @@
+{
+  "app": {
+    "forms": {
+      "person": {
+        "first_name": "Prénom",
+        "last_name": "Nom",
+        "email": "E-mail",
+        "phone_number": "Numéro de téléphone",
+        "password": "Mot de passe",
+        "validations": {
+          "first_name_required": "Le prénom est obligatoire",
+          "last_name_required": "Le nom est obligatoire",
+          "phone_number_required": "Le numéro de téléphone est obligatoire",
+          "email_required": "L'e-mail est obligatoire",
+          "valid_email_required": "Un e-mail valide est obligatoire",
+          "password_required": "Le mot de passe est obligatoire",
+          "minimum_password_length": "Le mot de passe doit contenir au moins {minimum_length} caractères"
+        }
+      }
+    },
+    "signup": {
+      "left": {
+        "title": "Créons votre compte !",
+        "subtitle": "S'inscrire sur Bookisia est rapide et gratuit – sans engagement ni contrat à long terme",
+        "form": {
+          "firstname": "Prénom",
+          "lastname": "Nom",
+          "email_address": "Adresse e-mail",
+          "password": "Mot de passe",
+          "signup": "S'inscrire"
+        },
+        "existing_account_question": "Vous avez déjà un compte ?",
+        "sign_in": "Se connecter"
+      },
+      "right": {
+        "title": "Explorez les fonctionnalités premium grâce à votre essai gratuit de 30 jours du forfait Teams",
+        "features": [
+          "Site web de réservation d'entreprise",
+          "Ajout de personnel",
+          "Notifications SMS",
+          "Horaires personnalisés pour chaque employé",
+          "Assistance par téléphone et par e-mail"
+        ],
+        "call_to_action": "Devenons partenaires de votre succès !"
+      }
+    },
+    "signin": {
+      "title": "Connectez-vous à votre compte !",
+      "username_placeholder": "Adresse e-mail",
+      "remember_me": "Se souvenir de moi",
+      "forgot_password": "Mot de passe oublié ?",
+      "no_account_text": "Vous n'avez pas de compte ?",
+      "turnstile": {
+        "validation_error": "La vérification a échoué. Veuillez rafraîchir la page et réessayer !"
+      }
+    },
+    "forgot_password": {
+      "send": {
+        "title": "Réinitialisation du mot de passe",
+        "subtitle": "Veuillez saisir l'adresse e-mail associée à votre compte et nous vous enverrons un code de vérification pour réinitialiser votre mot de passe."
+      },
+      "verify": {
+        "title": "Code de vérification",
+        "subtitle": "Veuillez saisir le code de vérification qui a été envoyé sur votre boîte e-mail."
+      },
+      "update": {
+        "title": "Réinitialiser le mot de passe",
+        "subtitle": "Veuillez saisir votre nouveau mot de passe."
+      },
+      "forms": {
+        "new_password": "Nouveau mot de passe",
+        "confirm_password": "Confirmer le mot de passe",
+        "validations": {
+          "new_password": "Le nouveau mot de passe est obligatoire",
+          "confirm_password": "La confirmation du mot de passe est obligatoire",
+          "verification_code": "Le code de vérification est obligatoire"
+        }
+      },
+      "confirm_password": "Confirmer le nouveau mot de passe",
+      "notify": {
+        "unable_to_verify": "Impossible de vérifier le code",
+        "enter_code": "Veuillez saisir le code de vérification envoyé à l'adresse e-mail fournie.",
+        "unable_to_update": "Impossible de mettre à jour le mot de passe"
+      }
+    },
+    "navigation_drawer": {
+      "home": "Accueil",
+      "calendar": "Calendrier",
+      "catalog": "Catalogue",
+      "staff": "Personnel",
+      "online": "En ligne",
+      "services": "Services",
+      "categories": "Catégories",
+      "team_members": "Membres de l'équipe",
+      "permissions": "Autorisations",
+      "integrations": "Intégrations",
+      "settings": "Paramètres",
+      "profile": "Profil",
+      "personal_information": "Informations personnelles",
+      "my_business": "Mon entreprise",
+      "locations": "Établissements",
+      "about": "À propos",
+      "logout": "Se déconnecter"
+    },
+    "dashboard": {
+      "latest_appointments": {
+        "title": "Rendez-vous à venir",
+        "action_btn": "Voir le calendrier",
+        "subtitle": "Aucun nouveau rendez-vous"
+      },
+      "trial_expiration_counter": {
+        "title": "Il vous reste {days} jours pour explorer Bookisia gratuitement",
+        "subtitle": "Vous essayez actuellement notre forfait solo. Vous ne serez pas facturé avant d'avoir souscrit un abonnement.",
+        "action_btn": "Choisir un forfait"
+      },
+      "quick_actions": {
+        "title": "Actions rapides",
+        "actions": {
+          "1": {
+            "title": "Voir vos établissements",
+            "subtitle": "Les établissements sont les lieux où vous exercez votre activité."
+          },
+          "2": {
+            "title": "Ouvrir votre site web",
+            "subtitle": "Visitez votre site web principal."
+          }
+        }
+      },
+      "sales_chart": {
+        "filters": {
+          "1": {
+            "text": "Revenus hebdomadaires"
+          },
+          "2": {
+            "text": "Revenus mensuels"
+          },
+          "3": {
+            "title": "3 derniers mois",
+            "text": "Revenus des 3 derniers mois"
+          }
+        }
+      }
+    },
+    "calendar": {
+      "4day": "4 jours",
+      "day": "Jour",
+      "week": "Semaine",
+      "month": "Mois",
+      "view": "Vue",
+      "stack": "Empiler",
+      "column": "Colonne",
+      "event_overlap_mode": "Mode de superposition d'événements",
+      "today": "Aujourd'hui",
+      "weekdays": "Jours de la semaine",
+      "sun_sat": "Dim - Sam",
+      "mon_sun": "Lun - Dim",
+      "mon_fri": "Lun - Ven",
+      "mon_wed_fri": "Lun, Mer, Ven"
+    },
+    "sites": {
+      "index": {
+        "action_btn": "Créer un site web",
+        "external_btn": "Ouvrir le site de l'établissement",
+        "select_label": "Choisir un établissement"
+      },
+      "create_website": {
+        "create_your": "Créez votre",
+        "subtext": "Votre site web est l'endroit idéal pour mettre en valeur tout ce que votre entreprise a à offrir. Commençons par sélectionner le thème qui correspond le mieux à votre activité.",
+        "action_btn": "Créer un site web"
+      },
+      "templates": {
+        "title": "Sélectionner un modèle de site web",
+        "preview_text": "Aperçu",
+        "edit_text": "Modifier"
+      }
+    },
+    "services": {
+      "action_btn": "Créer un service",
+      "explanation": "Vous vendez votre temps ? Créez et vendez des services associés à une durée définie.",
+      "form": {
+        "add_title": "Ajouter un nouveau service",
+        "edit_title": "Modifier le service",
+        "service_image": "Image du service",
+        "service_name": "Nom du service",
+        "variations_text": "Créez plusieurs déclinaisons pour un même service. Définissez des options de tarification, des durées différentes et plus encore."
+      }
+    },
+    "categories": {
+      "action_btn": "Créer une catégorie",
+      "explanation": "Les catégories permettent d'organiser les articles de votre catalogue."
+    },
+    "integrations": {
+      "revoke_btn": "Révoquer l'accès",
+      "connected_by": "Connecté par",
+      "google-meet": {
+        "card": {
+          "title": "Google Meet",
+          "description": "Inclure les détails de Google Meet dans vos événements Bookisia"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Informations Google Meet",
+            "subtitle": "En connectant votre compte Google Meet, vous pouvez :",
+            "action_btn": "Connecter Google Meet",
+            "features": [
+              "Créer automatiquement des réunions Google Meet lors de la planification d'un événement",
+              "Partager instantanément des informations de visioconférence uniques dès la confirmation."
+            ],
+            "requirements": [
+              "Un compte Gmail"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Félicitations ! Vous pouvez déjà planifier vos visioconférences avec Google Meet car votre calendrier Google est connecté à Bookisia.",
+          "calendar_select_title": "Calendrier sur lequel ajouter les événements"
+        },
+        "notifications": {
+          "update_success": "Calendrier mis à jour avec succès",
+          "revoke_success": "L'accès au calendrier a été révoqué",
+          "revoke_failed": "Impossible de révoquer l'accès au calendrier. Veuillez réessayer."
+        }
+      },
+      "google-calendar": {
+        "card": {
+          "title": "Google Calendar",
+          "description": "Ajouter des événements à votre calendrier et éviter les doubles réservations"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Informations Google Calendar",
+            "subtitle": "En connectant votre compte Google Calendar, vous pouvez :",
+            "action_btn": "Connecter Google Calendar",
+            "features": [
+              "Ajouter automatiquement des événements à votre Google Calendar",
+              "Éviter les doubles réservations en automatisant la création d'événements"
+            ],
+            "requirements": [
+              "Un compte Gmail"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Félicitations ! Votre compte Google Calendar est connecté à Bookisia.",
+          "calendar_select_title": "Calendrier sur lequel ajouter les événements"
+        },
+        "notifications": {
+          "update_success": "Calendrier mis à jour avec succès",
+          "revoke_success": "L'accès au calendrier a été révoqué",
+          "revoke_failed": "Impossible de révoquer l'accès au calendrier. Veuillez réessayer."
+        }
+      },
+      "zoom": {
+        "card": {
+          "title": "Zoom",
+          "description": "Inclure les détails de Zoom dans vos événements Bookisia"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Informations Zoom",
+            "subtitle": "En connectant votre compte Zoom, vous pouvez :",
+            "action_btn": "Connecter Zoom",
+            "features": [
+              "Créer automatiquement des réunions Zoom lors de la planification d'un événement",
+              "Partager instantanément des informations de visioconférence uniques dès la confirmation."
+            ],
+            "requirements": [
+              "Un compte Zoom"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Félicitations ! Votre compte Zoom est connecté à Bookisia."
+        },
+        "notifications": {
+          "update_success": "Zoom mis à jour avec succès",
+          "revoke_success": "L'accès à Zoom a été révoqué",
+          "revoke_failed": "Impossible de révoquer l'accès à Zoom. Veuillez réessayer."
+        }
+      },
+      "stripe": {
+        "card": {
+          "title": "Stripe",
+          "description": "Encaisser les paiements avant vos rendez-vous"
+        },
+        "pages": {
+          "disconnected": {
+            "title": "Informations Stripe",
+            "subtitle": "En connectant votre compte Stripe, vous pouvez :",
+            "action_btn": "Connecter Stripe",
+            "features": [
+              "Encaisser le paiement avant le début de votre rendez-vous",
+              "Recevoir l'argent déposé sur votre compte sous 2 à 3 jours ouvrables"
+            ],
+            "requirements": [
+              "Un compte Stripe"
+            ]
+          }
+        },
+        "connected": {
+          "title": "Félicitations ! Votre compte Stripe est connecté à Bookisia."
+        },
+        "notifications": {
+          "update_success": "Stripe a été mis à jour avec succès",
+          "revoke_success": "L'accès à Stripe a été révoqué",
+          "revoke_failed": "Impossible de révoquer l'accès à Stripe. Veuillez réessayer."
+        }
+      }
+    },
+    "team_members": {
+      "page_title": "Membres de l'équipe",
+      "solo_staff": "Membre de l'équipe",
+      "action_btn": "Ajouter un membre de l'équipe"
+    },
+    "account": {
+      "language_preferences": "Préférences linguistiques",
+      "timezone_preferences": "Préférences de fuseau horaire",
+      "select_language": "Sélectionner la langue",
+      "select_timezone": "Sélectionner le fuseau horaire"
+    },
+    "locations": {
+      "index": {
+        "create_card": {
+          "title": "Établissement",
+          "subtitle": "Établissements professionnels pour l'adresse et les horaires d'ouverture.",
+          "action_btn": "Créer un établissement"
+        }
+      },
+      "form": {
+        "add_title": "Ajouter un nouvel établissement",
+        "edit_title": "Modifier l'établissement",
+        "nickname": "Surnom",
+        "website_url": "URL du site web",
+        "type": "Type",
+        "contact_information": "Coordonnées",
+        "social_contact": {
+          "title": "Réseaux sociaux"
+        },
+        "branding": {
+          "subtitle": "Personnalisez vos points de contact avec les clients (reçus, factures, parcours de réservation de rendez-vous et écrans de paiement) avec le logo et les couleurs de votre marque.",
+          "action_btn": "Appliquer l'image de marque"
+        },
+        "business_hours": {
+          "title": "Horaires d'ouverture",
+          "opens_at": "Ouvre à",
+          "closes_at": "Ferme à",
+          "closed": "Fermé",
+          "add_new_time": "Ajouter un horaire",
+          "confirm_action": {
+            "title": "Confirmer l'action",
+            "text": "Vous êtes sur le point d'être redirigé vers la page de création de service. Vous perdrez la progression actuelle de votre formulaire. Voulez-vous continuer ?"
+          }
+        },
+        "services": {
+          "subtitle": "Choisissez les services que vous souhaitez associer à cet établissement"
+        },
+        "staff": {
+          "title": "Personnel",
+          "subtitle": "Choisissez les membres de l'équipe que vous souhaitez associer à cet établissement\n\n"
+        }
+      }
+    },
+    "subscription": {
+      "action_btn": "S'abonner",
+      "explanation": "Sélectionnez le forfait d'abonnement idéal pour votre entreprise",
+      "expiration_date": "Date d'expiration",
+      "payment_method": "Moyen de paiement",
+      "manage_plan": "Gérer le forfait",
+      "ongoing": "En cours",
+      "card": "Carte",
+      "active_plan": "Forfait actif",
+      "cancel_plan": "Résilier le forfait",
+      "form": {
+        "add_title": "Ajouter un nouvel abonnement",
+        "edit_title": "Modifier le service"
+      }
+    },
+    "days": {
+      "Monday": "Lundi",
+      "Tuesday": "Mardi",
+      "Wednesday": "Mercredi",
+      "Thursday": "Jeudi",
+      "Friday": "Vendredi",
+      "Saturday": "Samedi",
+      "Sunday": "Dimanche"
+    },
+    "dictionary": {
+      "active": "Actif",
+      "add": "Ajouter",
+      "address": "Adresse",
+      "branding": "Image de marque",
+      "categories": "Catégories",
+      "cancel": "Annuler",
+      "city": "Ville",
+      "connected": "Connecté",
+      "continue": "Continuer",
+      "day": "Jour",
+      "description": "Description",
+      "discover": "Découvrir",
+      "duration": "Durée",
+      "edit": "Modifier",
+      "email": "E-mail",
+      "first": "Premier",
+      "inactive": "Inactif",
+      "integrations": "Intégrations",
+      "job": "Poste",
+      "jobs": "Postes",
+      "manage": "Gérer",
+      "month": "Mois",
+      "name": "Nom",
+      "opening_hours": "Horaires d'ouverture",
+      "password": "Mot de passe",
+      "permission": "Autorisation",
+      "permissions": "Autorisations",
+      "personal_information": "Informations personnelles",
+      "price": "Prix",
+      "remove": "Supprimer",
+      "requirements": "Prérequis",
+      "save": "Enregistrer",
+      "send": "Envoyer",
+      "services": "Services",
+      "sign_in": "Se connecter",
+      "sign_up": "S'inscrire",
+      "staff": "Personnel",
+      "submit": "Valider",
+      "subscribe": "S'abonner",
+      "subscription": "Abonnement",
+      "subscriptions": "Abonnements",
+      "template": "Modèle",
+      "time_blocks": "Créneaux horaires",
+      "variations": "Déclinaisons",
+      "update": "Mettre à jour",
+      "upload": "Téléverser",
+      "website": "Site web",
+      "websites": "Sites web",
+      "week": "Semaine"
+    },
+    "address": {
+      "address_line": "Ligne d'adresse {address_line}",
+      "city": "Ville",
+      "province": "Province",
+      "post_code": "Code postal",
+      "country": "Pays",
+      "validations": {
+        "country": "Le pays est obligatoire",
+        "address": "L'adresse est obligatoire",
+        "city": "La ville est obligatoire",
+        "province": "La province est obligatoire",
+        "post_code": "Le code postal est obligatoire"
+      }
+    },
+    "multi_words": {
+      "phone_number": "Numéro de téléphone"
+    }
+  }
+}

@@ -4,21 +4,31 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@pinia/nuxt',
-    'nuxt-auth-sanctum'
+    'nuxt-auth-sanctum',
+    'nuxt-echarts',
+    '@nuxtjs/turnstile',
+    'dayjs-nuxt',
+    '@nuxtjs/i18n'
   ],
   sanctum: {
     mode: 'token',
-    // endpoints: {
-    //   login: '/auth/login',
-    //   logout: '/auth/logout',
-    //   user: '/user'
-    // },
-    // redirect: {
-    //   onLogin: '/dashboard',
-    //   onAuthOnly: '/dashboard'
-    // }
   },
   imports: {
     dirs: ['stores']
-  }
+  },
+  dayjs: {
+    plugins:[
+      'utc',
+      'timezone'
+    ]
+  },
+  vite: {
+    resolve: {
+      alias: [
+        { find: /^dayjs$/, replacement: 'dayjs/esm' },
+        { find: /^dayjs\/plugin\/(.*)$/, replacement: 'dayjs/esm/plugin/$1' },
+        { find: /^dayjs\/locale\/(.*)$/, replacement: 'dayjs/esm/locale/$1' },
+      ],
+    },
+  },
 })

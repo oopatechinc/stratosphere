@@ -14,10 +14,13 @@
   },
   "dependencies": {
     "@pinia/nuxt": "catalog:",
+    "@nuxtjs/turnstile": "catalog:",
     "nuxt": "catalog:",
     "nuxt-auth-sanctum": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
-    "vue-router": "catalog:"
+    "vue-router": "catalog:",
+    "nuxt-echarts": "catalog:",
+    "echarts": "catalog:"
   }
 }

@@ -13,5 +13,17 @@ catalog:
   "pinia": "^3.0.4"
   "vuetify": "^4.1.2"
   "vuetify-nuxt-module": "^1.0.0-beta.11"
+  "@nuxtjs/turnstile": "^1.1.3"
+  "@nuxtjs/i18n": "^10.4.0"
+  "echarts": "^6.1.0"
+  "lodash-es": "^4.18.1"
+  "nuxt-echarts": "^1.0.1"
+  "v-phone-input": "^5.1.4"
+  "vue-echarts": "^8.0.1"
+  "crypto-js": "^4.2.0"
+  "dayjs-nuxt": "^2.1.11"
+  "@types/lodash-es": "^4.17.12"
+  "@stratosphere/ui-components": "workspace:*"
+  "@stratosphere/core-layer": "workspace:*"
 minimumReleaseAgeExclude:
   - vuetify@4.1.2

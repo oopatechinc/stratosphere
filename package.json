@@ -6,7 +6,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "turbo run dev --filter=\"./apps/*\"",
+    "dev": "turbo run dev",
     "prepare": "turbo run prepare",
     "build": "turbo run build",
     "lint": "turbo run lint",

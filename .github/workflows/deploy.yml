@@ -35,13 +35,21 @@ jobs:
       - name: Install Monorepo Dependencies
         run: pnpm install --frozen-lockfile
 
-      # Determine what changed using dry-runs
+      # Determine what changed using dry-runs, but allow forcing an initial override
       - name: Check Affected Apps
         id: affected
         run: |
-          echo "admin=$(pnpm turbo run build --filter=@stratosphere/admin-dashboard --dry=json | grep -q '"name": "@stratosphere/admin-dashboard"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
-          echo "frontpage=$(pnpm turbo run build --filter=@stratosphere/frontpage --dry=json | grep -q '"name": "@stratosphere/frontpage"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
-          echo "api=$(git diff --name-only HEAD~1 | grep -q '^apps/api-laravel/' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          FORCE_ALL=$([[ "${{ github.event.head_commit.message }}" == *"[force build]"* ]] && echo "true" || echo "false")
+          
+          if [ "$FORCE_ALL" = "true" ]; then
+            echo "admin=true" >> $GITHUB_OUTPUT
+            echo "frontpage=true" >> $GITHUB_OUTPUT
+            echo "api=true" >> $GITHUB_OUTPUT
+          else
+            echo "admin=$(pnpm turbo run build --filter=@stratosphere/admin-dashboard --dry=json | grep -q '"name": "@stratosphere/admin-dashboard"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+            echo "frontpage=$(pnpm turbo run build --filter=@stratosphere/frontpage --dry=json | grep -q '"name": "@stratosphere/frontpage"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+            echo "api=$(git diff --name-only HEAD~1 | grep -q '^apps/api-laravel/' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          fi
 
       # Build and Push filters
       - name: Build & Push Admin Dashboard

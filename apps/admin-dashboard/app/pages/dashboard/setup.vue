@@ -1,7 +1,6 @@
 <script setup lang="ts">
 
-import type {Tenant} from "#imports";
-import {useTenantStore} from "#imports";
+import type {Tenant} from "@stratosphere/core-layer/types";
 import {useTenantService} from "~/composables/useTenantService";
 const {refreshIdentity, user} = useSanctumAuth()
 

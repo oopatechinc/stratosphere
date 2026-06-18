@@ -1,9 +1,11 @@
+import type {User} from "@stratosphere/core-layer/types";
+
 export const useAppStore = defineStore('app', () => {
     const navigationUrl = ref('/')
-    const {tenant} = useTenantStore()
+    const user = useSanctumUser<User>()
 
     function isVertical(verticalTag: string) {
-        return tenant?.vertical.tag === verticalTag
+        return user.value?.tenant.vertical.tag === verticalTag
     }
 
     return {navigationUrl, isVertical}

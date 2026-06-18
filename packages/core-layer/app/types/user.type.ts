@@ -1,5 +1,6 @@
 import type { Staff } from './staff.type'
 import type { Address } from './address.type'
+import type {Tenant} from './tenant.type'
 
 export type User = {
   id?: number
@@ -15,5 +16,6 @@ export type User = {
   type?: string
   morph_class?: string
   staff?: Staff
-  address: Address
+  address?: Address,
+  tenant?: Tenant
 }

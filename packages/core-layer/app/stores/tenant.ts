@@ -37,7 +37,7 @@ export const useTenantStore = defineStore('tenant', () => {
     loading.value = false
 
     if (status.value === 'error') {
-      throw new Error('Unable to retrieve business')
+      throw new Error('Unable to retrieve business 55')
     }
 
     tenant.value = data.value as Tenant

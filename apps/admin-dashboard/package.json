@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/kit": "catalog:",
     "@nuxtjs/i18n": "catalog:",
     "@nuxtjs/turnstile": "catalog:",
     "@stratosphere/core-layer": "workspace:*",

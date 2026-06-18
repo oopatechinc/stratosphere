@@ -1,8 +1,11 @@
+import { createResolver } from '@nuxt/kit'
+const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: {enabled: true},
     extends: [
         '@stratosphere/ui-components',
+        '@stratosphere/core-layer'
     ],
     runtimeConfig: {
         public: {
@@ -21,15 +24,18 @@ export default defineNuxtConfig({
             secretKey: import.meta.env.TURNSTILE_SECRET_KEY
         }
     },
+    modules: ['nuxt-auth-sanctum'],
     build: {
         transpile: [
             'vuetify',
             'v-phone-input'
         ],
     },
+    alias: {
+        '@stratosphere/core-layer': resolve('../../packages/core-layer/app')
+    },
     sanctum: {
         baseUrl: import.meta.env.API_BASE_URL,
-        mode: 'token',
         endpoints: {
             login: '/auth/login',
             logout: '/auth/logout',
@@ -61,7 +67,7 @@ export default defineNuxtConfig({
             useCookie: true,
             cookieKey: 'i18n_redirected',
             alwaysRedirect: true,
-            fallbackLocale: 'en'
+            fallbackLocale: 'en-US'
         },
         defaultLocale: "en-US"
     },

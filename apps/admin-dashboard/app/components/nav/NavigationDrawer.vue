@@ -1,10 +1,11 @@
 <script setup lang="ts">
 
 import {useTenantStore} from "#imports";
+import type {User} from "@stratosphere/core-layer/types";
 
 const localePath = useLocalePath()
 const {logout} = useSanctumAuth()
-const {tenant} = useTenantStore()
+const user = useSanctumUser<User>()
 </script>
 
 <template>
@@ -16,7 +17,7 @@ const {tenant} = useTenantStore()
             class="ma-4"
             prepend-icon="mdi-account"
             append-icon="mdi-chevron-right"
-            :text="tenant?.name"
+            :text="user?.tenant?.name"
             :to="localePath('/dashboard/business/about')"
         />
       </template>

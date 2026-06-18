@@ -1,4 +1,5 @@
 import { defineNuxtPlugin } from '#app'
+import type {User} from "@stratosphere/core-layer/types";
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('sanctum:request', (app, ctx, logger) => {
     // ctx.options.headers.append('X-ORIGIN-API-KEY', nuxtApp.$config.public.originApiKey)
@@ -6,12 +7,12 @@ export default defineNuxtPlugin((nuxtApp) => {
     ctx.options.query = ctx.options.query || {}
     ctx.options.query.XDEBUG_SESSION_START = 1
 
-    // ctx.options.headers.append('X-Tenant-ID', String(1))
+    const user = useSanctumUser<User>()
+    const isGetUserUrl = ctx.request.toString().includes('/user')
 
-    // const {domain} = useDomainStore()
-    // if (domain?.tenant_id) {
-    //   ctx.options.headers.append('X-Tenant-ID', String(domain.tenant_id))
-    // }
+    if (!isGetUserUrl && user.value?.tenant_id) {
+      ctx.options.headers.append('X-Tenant-ID', String(user.value?.tenant_id))
+    }
   })
 
   nuxtApp.hook('sanctum:response', (app, ctx, logger) => {

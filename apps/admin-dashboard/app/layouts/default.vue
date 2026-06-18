@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const {tenant} = storeToRefs(useTenantStore())
+import type {User} from "@stratosphere/core-layer/types";
+const user = useSanctumUser<User>()
 </script>
 
 <template>
-<VApp v-if="tenant">
+<VApp v-if="user?.tenant_id">
   <NavNavigationDrawer />
   <VMain>
     <NuxtPage />

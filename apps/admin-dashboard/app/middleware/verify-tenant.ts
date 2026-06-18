@@ -1,4 +1,4 @@
-import type {User} from "#bookisia-shared-module/types";
+import type {User} from "@stratosphere/core-layer/types";
 
 export default defineNuxtRouteMiddleware(() => {
     const {isAuthenticated} = useSanctumAuth()

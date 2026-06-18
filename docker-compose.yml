@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  gemini_dev:
+    build: .
+    container_name: stratosphere_gemini_workspace
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    volumes:
+      - ./workspace:/var/www/html/workspace:rw
+    # Keeps stdin open and allocates a pseudo-TTY so you can interact with it
+    tty: true
+    stdin_open: true
+    restart: unless-stopped

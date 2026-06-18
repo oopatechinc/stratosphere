@@ -1,4 +1,4 @@
-import type {Category, Service, ServiceVariation} from "#bookisia-shared-module/types"
+import type {Category, Service, ServiceVariation} from "@stratosphere/core-layer/types"
 
 export const useServicesStore = defineStore('services', () => {
     const client = useSanctumClient();

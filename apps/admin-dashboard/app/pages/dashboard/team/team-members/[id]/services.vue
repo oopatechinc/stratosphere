@@ -1,17 +1,17 @@
 <script setup lang="ts">
 
-import {useUtils} from "@stratosphere/core-layer/app/composables/useUtils";
-import type {Service} from "#bookisia-shared-module/types";
+import type {Service} from "@stratosphere/core-layer/types";
+import {useUtils} from "#imports";
 
 const {syncServices} = useStaffsStore()
 
-const {business} = storeToRefs(useBusinessStore())
+const {tenant} = storeToRefs(useTenantStore())
 
 const {decrypter} = useUtils()
 
 const showAddNewServiceDialog = ref(false)
 
-const currentStaff = business.value!.staff!.find(s => s.id === Number(decrypter(String(useRoute().params.id))))
+const currentStaff = tenant.value!.staff!.find(s => s.id === Number(decrypter(String(useRoute().params.id))))
 
 const selectedServices = ref<Service[]>([...currentStaff!.services!])
 
@@ -50,7 +50,7 @@ async function submit() {
         <VCardText>
           <VSelect
               v-model="selectedServices"
-              :items="business!.services"
+              :items="tenant!.services"
               item-title="name"
               multiple
               return-object

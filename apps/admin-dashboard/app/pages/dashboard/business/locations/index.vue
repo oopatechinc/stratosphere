@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Location, User} from "#bookisia-shared-module/types";
+import type {Location, User} from "@stratosphere/core-layer/types";
 import {useSanctumUser} from "#imports";
 
 const store = useLocationsStore()

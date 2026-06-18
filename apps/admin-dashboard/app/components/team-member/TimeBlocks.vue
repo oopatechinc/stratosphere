@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {TimeBlock, User} from "#bookisia-shared-module/types"
+import type {TimeBlock, User} from "@stratosphere/core-layer/types"
 import TimeBlockForm from "~/components/team-member/TimeBlockForm.vue";
 import moment from "moment-timezone";
 import type {Moment} from "moment";

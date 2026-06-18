@@ -6,7 +6,7 @@ import type {
     Staff,
     Location,
     TimeBlock,
-} from "#bookisia-shared-module/types"
+} from "@stratosphere/core-layer/types"
 import {useOpeningDays} from "~/composables/shared/useOpeningDays";
 import {useStaffsStore} from "#imports"
 

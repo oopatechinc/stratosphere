@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Occupation} from "#bookisia-shared-module/types";
+import type {Occupation} from "@stratosphere/core-layer/types";
 
 const {genericRequiredRule} = useValidationRules()
 const {tenant} = storeToRefs(useTenantStore())

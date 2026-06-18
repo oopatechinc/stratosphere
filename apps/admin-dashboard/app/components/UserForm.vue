@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {User} from "#bookisia-shared-module/types";
+import type {User} from "@stratosphere/core-layer/types";
 import {VPhoneInput} from "v-phone-input";
 
 const {genericRequiredRule} = useValidationRules()

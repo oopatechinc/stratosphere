@@ -1,4 +1,4 @@
-import type {Service, User} from "#bookisia-shared-module/types"
+import type {Service, User} from "@stratosphere/core-layer/types"
 
 export const useServiceForm = async () => {
     const BASE_URL = '/dashboard/services'

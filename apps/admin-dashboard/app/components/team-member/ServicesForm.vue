@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Service, User} from "#bookisia-shared-module/types"
+import type {Service, User} from "@stratosphere/core-layer/types"
 import {useServicesStore, useValidationRules} from "#imports";
 
 const {genericRequiredRule} = useValidationRules()

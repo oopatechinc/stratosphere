@@ -1,4 +1,4 @@
-import type {Website} from "#bookisia-shared-module/types";
+import type {Website} from "@stratosphere/core-layer/types";
 
 export const useTenantWebsiteStore = defineStore('tenant_websites', () => {
     const client = useSanctumClient();

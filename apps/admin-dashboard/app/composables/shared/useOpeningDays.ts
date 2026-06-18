@@ -1,4 +1,4 @@
-import type {OpeningDay} from "#bookisia-shared-module/types";
+import type {OpeningDay} from "@stratosphere/core-layer/types";
 
 export const useOpeningDays = () => {
     const initialOpeningDays = <OpeningDay[]>[

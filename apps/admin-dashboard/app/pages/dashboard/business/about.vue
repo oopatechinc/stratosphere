@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import {useLanguagesStore, useTenantStore, useSanctumUser} from "#imports";
-import type {User} from "#bookisia-shared-module/types";
+import type {User} from "@stratosphere/core-layer/types";
 
 const {genericRequiredRule} = useValidationRules()
 const {fetchTenantById, update} = useTenantStore()
 const {tenant} = storeToRefs(useTenantStore())
 const user = useSanctumUser<User>()
 
-await fetchTenantById(user.value!.staff!.tenant_id!)
+await fetchTenantById(user.value!.tenant_id!)
 const {displaySuccessMessage, displayErrorMessage} = useSnackbarStore()
 const languagesStore = useLanguagesStore()
 await languagesStore.fetch()
@@ -58,7 +58,7 @@ function handleEdit(item: KEY_VAL) {
 async function submit() {
   if (formValidity.value !== true) return
   let error = false
-  await update(business.value!.id!, {[currentItem.value!.key]: form.value}).catch(() => {
+  await update(tenant.value!.id!, {[currentItem.value!.key]: form.value}).catch(() => {
     error = true
   })
 

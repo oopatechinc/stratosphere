@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import type {User, Staff} from "#bookisia-shared-module/types"
+import type {User, Staff} from "@stratosphere/core-layer/types"
 import type {CalendarEvent} from "vuetify/lib/components/VCalendar/types.js";
 import {useStaffsStore} from "#imports";
 import {useDayjs} from "#dayjs";

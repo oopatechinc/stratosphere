@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {CollectionItem, CollectionProperty} from "#bookisia-shared-module/types";
+import type {CollectionItem, CollectionProperty} from "@stratosphere/core-layer/types";
 
 const props = defineProps<{type: string, returnUrl: string }>()
 const {

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {ServiceVariation} from "#bookisia-shared-module/types";
+import type {ServiceVariation} from "@stratosphere/core-layer/types";
 
 const emit = defineEmits(['hideDialog'])
 

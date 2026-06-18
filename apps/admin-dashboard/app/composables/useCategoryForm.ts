@@ -1,4 +1,4 @@
-import type {Category, User} from "#bookisia-shared-module/types"
+import type {Category, User} from "@stratosphere/core-layer/types"
 
 export const useCategoryForm = async () => {
     const route = useRoute()

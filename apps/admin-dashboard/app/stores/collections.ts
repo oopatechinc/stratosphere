@@ -1,4 +1,4 @@
-import type { CollectionItem } from "#bookisia-shared-module/types"
+import type { CollectionItem } from "@stratosphere/core-layer/types"
 
 export const useCollectionsStore = defineStore('collections', () => {
     const client = useSanctumClient();

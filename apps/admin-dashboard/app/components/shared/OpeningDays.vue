@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {OpeningDay, OpeningHour} from "#bookisia-shared-module/types"
+import type {OpeningDay, OpeningHour} from "@stratosphere/core-layer/types"
 import moment from "moment-timezone"
 import {DAY_OF_WEEKS} from "~/utils/constants";
 

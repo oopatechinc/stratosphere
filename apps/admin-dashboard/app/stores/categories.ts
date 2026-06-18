@@ -1,4 +1,4 @@
-import type {Category} from "#bookisia-shared-module/types";
+import type {Category} from "@stratosphere/core-layer/types";
 
 export const useCategoriesStore = defineStore('categories', () => {
     const client = useSanctumClient();

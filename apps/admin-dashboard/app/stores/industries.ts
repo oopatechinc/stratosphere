@@ -1,4 +1,4 @@
-import type {Industry} from "#bookisia-shared-module/types";
+import type {Industry} from "@stratosphere/core-layer/types";
 import {useSanctumClient} from "#imports";
 
 export const useIndustriesStore = defineStore('industries', () => {

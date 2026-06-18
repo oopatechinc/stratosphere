@@ -1,4 +1,4 @@
-import type {Staff} from "#bookisia-shared-module/types";
+import type {Staff} from "@stratosphere/core-layer/types";
 
 export const useAdminService = () => {
     async function get() {

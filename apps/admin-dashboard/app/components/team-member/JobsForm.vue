@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Occupation, User} from "#bookisia-shared-module/types";
+import type {Occupation, User} from "@stratosphere/core-layer/types";
 
 const user = useSanctumUser<User>()
 

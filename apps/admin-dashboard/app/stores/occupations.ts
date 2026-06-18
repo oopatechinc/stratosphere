@@ -1,4 +1,4 @@
-import type {Occupation} from "#bookisia-shared-module/types"
+import type {Occupation} from "@stratosphere/core-layer/types"
 
 export const useOccupationsStore = defineStore('occupations', () => {
     const client = useSanctumClient();

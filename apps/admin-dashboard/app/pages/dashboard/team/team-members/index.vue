@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Staff, User} from "#bookisia-shared-module/types";
+import type {Staff, User} from "@stratosphere/core-layer/types";
 
 const {fetch} = useStaffsStore()
 const {staffs} = storeToRefs(useStaffsStore())

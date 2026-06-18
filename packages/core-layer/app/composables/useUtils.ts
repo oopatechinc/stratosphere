@@ -1,5 +1,3 @@
-import { useDayjs } from '#dayjs'
-
 const SALT = 'ENCRYPTED_ID:'
 
 export const useUtils = () => {

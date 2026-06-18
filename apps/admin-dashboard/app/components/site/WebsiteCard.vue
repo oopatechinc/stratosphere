@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Website} from "#bookisia-shared-module/types"
+import type {Website} from "@stratosphere/core-layer/types"
 defineProps<{website: Website}>()
 
 const localePath = useLocalePath()

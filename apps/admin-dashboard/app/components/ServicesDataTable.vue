@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {Service, ServiceVariation} from "#bookisia-shared-module/types";
+import type {Service, ServiceVariation} from "@stratosphere/core-layer/types";
 
 const localePath = useLocalePath()
 const {encrypter} = useUtils()

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import {useSanctumUser} from "#imports";
-import type {Occupation, User} from "#bookisia-shared-module/types";
+import type {Occupation, User} from "@stratosphere/core-layer/types";
 
 const {genericRequiredRule} = useValidationRules()
 const occupationsStore = useOccupationsStore()
 const {occupations} = storeToRefs(occupationsStore)
 const user = useSanctumUser<User>()
 
-occupationsStore.get(`?tenant_id=${user.value?.staff?.tenant_id}`)
+occupationsStore.get(`?tenant_id=${user.value?.tenant_id}`)
 
 const job = defineModel<Occupation>()
 const showCreateJobForm = ref(false)

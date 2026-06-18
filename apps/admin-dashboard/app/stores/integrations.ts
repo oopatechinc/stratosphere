@@ -1,4 +1,4 @@
-import type {Integration} from "#bookisia-shared-module/types";
+import type {Integration} from "@stratosphere/core-layer/types";
 import {useSanctumClient, useSnackbarStore} from "#imports";
 
 export const useIntegrationsStore = defineStore('integrations', () => {

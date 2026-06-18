@@ -1,4 +1,4 @@
-import type {Address, Location, User, Tenant, WebsiteTemplate} from "#bookisia-shared-module/types"
+import type {Address, Location, User, Tenant, WebsiteTemplate} from "@stratosphere/core-layer/types"
 import {useOpeningDays} from "~/composables/shared/useOpeningDays";
 import {useServicesStore, useUtils} from "#imports";
 
@@ -16,8 +16,8 @@ export const useLocationForm = async () => {
     const {fetch: fetchStaff} = useStaffsStore()
     const {staffs} = storeToRefs(useStaffsStore())
 
-    await fetchServices(`?tenant_id=${user.value?.staff?.tenant_id}`)
-    await fetchStaff(`?tenant_id=${user.value?.staff?.tenant_id}`)
+    await fetchServices(`?tenant_id=${user.value?.tenant_id}`)
+    await fetchStaff(`?tenant_id=${user.value?.tenant_id}`)
 
 
     const {decrypter} = useUtils()

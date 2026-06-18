@@ -71,5 +71,5 @@ export const useStaffsStore = defineStore('staffs', () => {
     staffs.value[index] = staff
   }
 
-  return { loading, staffs, fetch, get, store, update }
+  return { loading, staffs, fetch, get, store, update, syncServices }
 })

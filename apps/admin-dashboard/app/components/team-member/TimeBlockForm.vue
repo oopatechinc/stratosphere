@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import moment from "moment-timezone";
 import {useValidationRules} from "#imports";
-import type {TimeBlock} from "#bookisia-shared-module/types"
+import type {TimeBlock} from "@stratosphere/core-layer/types"
 
 const {genericRequiredRule} = useValidationRules()
 const {timeBlockFrequencies} = useTimeBlockFrequenciesStore()

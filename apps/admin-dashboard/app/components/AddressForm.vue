@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import {useCountriesStore} from "#imports";
-import type { Address } from "#bookisia-shared-module/types";
+import type { Address } from "@stratosphere/core-layer/types";
 
 const {genericRequiredRule} = useValidationRules()
 const countryStore = useCountriesStore()

@@ -1,4 +1,4 @@
-import type { Tenant } from "#bookisia-shared-module/types";
+import type { Tenant } from "@stratosphere/core-layer/types";
 import {useSanctumClient} from "#build/imports";
 
 export const useTenantService = () => {

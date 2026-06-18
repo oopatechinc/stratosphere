@@ -39,9 +39,9 @@ jobs:
       - name: Check Affected Apps
         id: affected
         run: |
-          echo "admin=$(pnpm turbo query affected --task=build --filter=admin-dashboard | grep -q 'admin-dashboard' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
-          echo "frontpage=$(pnpm turbo query affected --task=build --filter=frontpage | grep -q 'frontpage' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
-          echo "api=$(git diff --name-only HEAD~1 | grep -q '^api-laravel/' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "admin=$(pnpm turbo run build --filter=admin-dashboard --dry=json | grep -q '"name": "admin-dashboard"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "frontpage=$(pnpm turbo run build --filter=frontpage --dry=json | grep -q '"name": "frontpage"' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "api=$(git diff --name-only HEAD~1 | grep -q '^apps/api-laravel/' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
 
       # Build and Push filters
       - name: Build & Push Admin Dashboard

@@ -11,7 +11,7 @@ COPY packages ./packages
 
 # Install dependencies and build specific app using turbo
 RUN pnpm install --frozen-lockfile
-RUN turbo run build --filter=admin-dashboard...
+RUN turbo run build --filter=@stratosphere/admin-dashboard...
 
 # Stage 2: Production runner
 FROM node:24-alpine AS runner

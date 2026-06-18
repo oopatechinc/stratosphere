@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Address extends Model
 {
     protected $fillable = [
-
         'country_id',
         'state_id',
         'addressable_id',

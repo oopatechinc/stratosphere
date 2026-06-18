@@ -1,6 +1,7 @@
 packages:
   - "apps/*"
   - "packages/*"
+  - "!api-laravel"
 allowBuilds:
   '@parcel/watcher': false
   esbuild: true

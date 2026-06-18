@@ -1,0 +1,93 @@
+name: Production CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2 # Critical for Turborepo change detection
+
+      - name: Install DigitalOcean doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Log in to DOCR
+        run: doctl registry login --expiry-seconds 600
+
+      - name: Setup pnpm 11
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'pnpm'
+
+      - name: Install Monorepo Dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Determine what changed
+      - name: Check Affected Apps
+        id: affected
+        run: |
+          echo "admin=$(pnpm turbo query affected --task=build --filter=admin-dashboard | grep -q 'admin-dashboard' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "frontpage=$(pnpm turbo query affected --task=build --filter=frontpage | grep -q 'frontpage' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+          echo "api=$(git diff --name-only HEAD~1 | grep -q '^api-laravel/' && echo 'true' || echo 'false')" >> $GITHUB_OUTPUT
+
+      # Build and Push filters
+      - name: Build & Push Admin Dashboard
+        if: steps.affected.outputs.admin == 'true'
+        run: |
+          docker build -t registry.digitalocean.com/${{ secrets.DOCR_NAME }}/admin-dashboard:latest -f apps/admin-dashboard/Dockerfile .
+          docker push registry.digitalocean.com/${{ secrets.DOCR_NAME }}/admin-dashboard:latest
+
+      - name: Build & Push Frontpage
+        if: steps.affected.outputs.frontpage == 'true'
+        run: |
+          docker build -t registry.digitalocean.com/${{ secrets.DOCR_NAME }}/frontpage:latest -f apps/frontpage/Dockerfile .
+          docker push registry.digitalocean.com/${{ secrets.DOCR_NAME }}/frontpage:latest
+
+      - name: Build & Push Laravel API
+        if: steps.affected.outputs.api == 'true'
+        run: |
+          docker build -t registry.digitalocean.com/${{ secrets.DOCR_NAME }}/api-laravel:latest ./api-laravel
+          docker push registry.digitalocean.com/${{ secrets.DOCR_NAME }}/api-laravel:latest
+
+      # Sync and Deploy to Server
+      - name: Prepare Host Target Directory
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: mkdir -p /app/production
+
+      - name: Transfer Docker Compose configuration
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ".deploy/production/docker-compose.yml"
+          target: "/app/production/"
+          strip_components: 2
+
+      - name: Refresh Production Containers
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.DROPLET_IP }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /app/production
+            docker compose pull
+            docker compose up -d --remove-orphans

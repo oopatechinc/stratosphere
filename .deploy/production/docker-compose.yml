@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  traefik:
+    image: traefik:v3.0
+    command:
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=support@oopatech.com"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./letsencrypt:/letsencrypt
+
+  api-laravel:
+    image: registry.digitalocean.com/stratosphere/api-laravel:latest
+    restart: always
+    environment:
+      - APP_ENV=production
+
+  frontpage:
+    image: registry.digitalocean.com/stratosphere/frontpage:latest
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontpage.rule=Host(`frontpage.oopatech.com`)"
+      - "traefik.http.routers.frontpage.entrypoints=websecure"
+      - "traefik.http.routers.frontpage.tls.certresolver=myresolver"
+
+  admin-dashboard:
+    image: registry.digitalocean.com/stratosphere/admin-dashboard:latest
+    restart: always
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.admin.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.oopatech.com`) || HostRegexp(`{customdomain:[a-z0-9.-]+}`)"
+      - "traefik.http.routers.admin.entrypoints=websecure"
+      - "traefik.http.routers.admin.tls.certresolver=myresolver"

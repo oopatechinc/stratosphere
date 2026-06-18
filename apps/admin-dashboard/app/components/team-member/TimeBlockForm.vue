@@ -8,7 +8,7 @@ const dayjs = useDayjs()
 
 
 const timeBlock = defineModel<TimeBlock>({
-  default: [{
+  default: () => [{
     staff_id: -1,
     reason: '',
     dates: [dayjs().format('LL')],

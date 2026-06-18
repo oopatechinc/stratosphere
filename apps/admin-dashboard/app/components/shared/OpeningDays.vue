@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type {OpeningDay, OpeningHour} from "@stratosphere/core-layer/types"
-import moment from "moment-timezone"
 import {DAY_OF_WEEKS} from "~/utils/constants";
 
 const openingDays = defineModel<OpeningDay[]>()
@@ -45,7 +44,7 @@ function updateTime() {
 
 function formatTime(isActive: boolean, time: string) {
   if (!isActive) return ""
-  return moment(time, 'hh:mm').format('hh:mm A')
+  return dayjs(time, 'hh:mm').format('hh:mm A')
 }
 
 function addNewTime(dayIndex: number) {

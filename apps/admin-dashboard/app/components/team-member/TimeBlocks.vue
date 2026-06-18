@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import type {TimeBlock, User} from "@stratosphere/core-layer/types"
 import TimeBlockForm from "~/components/team-member/TimeBlockForm.vue";
-import moment from "moment-timezone";
-import type {Moment} from "moment";
 import type {CalendarEvent} from "vuetify/lib/components/VCalendar/types.js";
 
 const user = useSanctumUser<User>()
@@ -12,6 +10,7 @@ fetch()
 const timeBlocks = defineModel<TimeBlock[]>()
 
 const showTimeBlockDialog = ref(false)
+const dayjs = useDayjs()
 
 const currentTimeBlock = ref<TimeBlock>()
 
@@ -19,7 +18,7 @@ const initialTimeBlock = {
   id: -1,
   staff_id: user.value!.staff!.id!,
   reason: '',
-  dates: [{date: moment().format('LL')}],
+  dates: [{date: dayjs().format('LL')}],
   starts_at: '',
   ends_at: '',
   is_all_day: false,
@@ -57,20 +56,20 @@ interface DateRecord {
 
 function createEvents() {
   timeBlocks.value!.forEach(timeBlock => {
-    const sortedMoments: Moment[] = timeBlock.dates
-        .map((d: DateRecord) => moment(d.date))
+    const sortedMoments = timeBlock.dates
+        .map((d: DateRecord) => dayjs(d.date))
         .sort((a, b) => a.valueOf() - b.valueOf());
 
     if (sortedMoments.length === 0) return [];
 
-    let rangeStart: Moment = sortedMoments[0]!;
-    let rangeEnd: Moment = sortedMoments[0]!;
+    let rangeStart = sortedMoments[0]!;
+    let rangeEnd = sortedMoments[0]!;
 
     for (let i = 1; i <= sortedMoments.length; i++) {
-      const current: Moment | undefined = sortedMoments[i];
+      const current = sortedMoments[i];
 
       // Check if 'current' is exactly 1 day after 'rangeEnd'
-      if (current && current.isSame(moment(rangeEnd).add(1, 'days'), 'day') && timeBlock.is_all_day) {
+      if (current && current.isSame(dayjs(rangeEnd).add(1, 'days'), 'day') && timeBlock.is_all_day) {
         rangeEnd = current;
       } else {
         // 2. Format the block strings

@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import moment from "moment-timezone";
 import {useValidationRules} from "#imports";
 import type {TimeBlock} from "@stratosphere/core-layer/types"
 
 const {genericRequiredRule} = useValidationRules()
 const {timeBlockFrequencies} = useTimeBlockFrequenciesStore()
+const dayjs = useDayjs()
+
 
 const timeBlock = defineModel<TimeBlock>({
   default: [{
     staff_id: -1,
     reason: '',
-    dates: [moment().format('LL')],
+    dates: [dayjs().format('LL')],
     starts_at: null,
     ends_at: null,
     is_all_day: false,
@@ -34,7 +35,7 @@ const formattedDates = computed(() => {
       : ''}`
 
   return timeBlock.value.dates.filter((d, index) => index + 1 <= maxReturnedDates).map(d => {
-    return moment(d.date).format('LL')
+    return dayjs(d.date).format('LL')
   }).join(', ') + moreText
 })
 
@@ -43,7 +44,7 @@ selectedDates.value = timeBlock.value!.dates.map(tbd => tbd.date)
 
 function onDateUpdate() {
   timeBlock.value.dates = selectedDates.value.map(date => {
-    return {time_block_id: timeBlock.value.id, date: moment(date).format('YYYY-MM-DD')}
+    return {time_block_id: timeBlock.value.id, date: dayjs(date).format('YYYY-MM-DD')}
   })
 }
 

@@ -57,7 +57,7 @@ RUN mkdir /var/log/php
 RUN touch /var/log/php/errors.log && chmod 777 /var/log/php/errors.log
 
 # Copy Crontab file
-COPY .docker/crontab /etc/cron.d/crontab
+COPY apps/api-laravel/.docker/crontab /etc/cron.d/crontab
 
 # Give execution rights on the cron job
 RUN chmod 0644 /etc/cron.d/crontab

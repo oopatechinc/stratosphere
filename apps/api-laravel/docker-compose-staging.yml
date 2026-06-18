@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  api:
+    container_name: api.staging.bookisia
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .env:/var/www/.env
+    ports:
+      - "9000:80"
+      - "6001:8080"
+    networks:
+      - bookisia-staging
+
+  mysql:
+    container_name: bookisia-staging-mysql-server
+    image: 'mysql/mysql-server:8.0'
+    ports:
+      - '4306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_DATABASE: '${DB_DATABASE}'
+      MYSQL_USER: '${DB_USERNAME}'
+      MYSQL_PASSWORD: '${DB_PASSWORD}'
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+    volumes:
+      - './.docker/staging/mysql:/var/lib/mysql'
+    networks:
+      - bookisia-staging
+
+networks:
+  bookisia-staging:
+    driver: bridge

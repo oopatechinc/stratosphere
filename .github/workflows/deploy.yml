@@ -67,7 +67,7 @@ jobs:
       - name: Build & Push Laravel API
         if: steps.affected.outputs.api == 'true'
         run: |
-          docker build -t registry.digitalocean.com/${{ secrets.DOCR_NAME }}/api-laravel:latest ./api-laravel
+          docker build -t registry.digitalocean.com/${{ secrets.DOCR_NAME }}/api-laravel:latest -f apps/api-laravel/Dockerfile .
           docker push registry.digitalocean.com/${{ secrets.DOCR_NAME }}/api-laravel:latest
 
       # Sync and Deploy to Server

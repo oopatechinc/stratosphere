@@ -5,13 +5,14 @@ import type {TimeBlock} from "@stratosphere/core-layer/types"
 const {genericRequiredRule} = useValidationRules()
 const {timeBlockFrequencies} = useTimeBlockFrequenciesStore()
 const dayjs = useDayjs()
+const dates = dayjs().format('LL')
 
 
 const timeBlock = defineModel<TimeBlock>({
   default: () => [{
     staff_id: -1,
     reason: '',
-    dates: [dayjs().format('LL')],
+    dates: [dates],
     starts_at: null,
     ends_at: null,
     is_all_day: false,

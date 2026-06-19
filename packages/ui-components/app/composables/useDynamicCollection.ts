@@ -14,8 +14,6 @@ export const useDynamicCollection = (dataSource: DataSource, mappings: Mappings,
   const items = ref<any[]>([])
   const loading = ref(false)
   const error = ref<string | null>(null)
-
-  debugger
   
   const fetchDynamicData = async () => {
     if (!dataSource.endpoint) return

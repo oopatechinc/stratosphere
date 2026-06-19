@@ -31,7 +31,7 @@ services:
     image: registry.digitalocean.com/stratosphere/api-laravel:latest
     restart: always
     volumes:
-      - /app/production/api.production.env:/var/www/html/.env:ro
+      - /app/production/env_files/api/api.production.env:/var/www/.env:ro
     labels:
       - "traefik.enable=true"
       # 1. Listen for the specific API domain
@@ -68,6 +68,8 @@ services:
   frontpage:
     image: registry.digitalocean.com/stratosphere/frontpage:latest
     restart: always
+    volumes:
+      - /app/production/env_files/frontpage/frontpage.production.env:/var/www/.env:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.frontpage.rule=Host(`frontpage.oopatech.com`)"
@@ -79,6 +81,8 @@ services:
   admin-dashboard:
     image: registry.digitalocean.com/stratosphere/admin-dashboard:latest
     restart: always
+    volumes:
+      - /app/production/env_files/admin/admin.production.env:/var/www/.env:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.admin.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.oopatech.com`) || HostRegexp(`{customdomain:[a-z0-9.-]+}`)"

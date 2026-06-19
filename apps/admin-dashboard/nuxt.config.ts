@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         '@stratosphere/core-layer': resolve('../../packages/core-layer/app')
     },
     sanctum: {
-        baseUrl: import.meta.env.API_BASE_URL,
+        baseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
         endpoints: {
             login: '/auth/login',
             logout: '/auth/logout',

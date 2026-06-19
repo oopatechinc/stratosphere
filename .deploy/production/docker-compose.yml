@@ -73,6 +73,7 @@ services:
       - "traefik.http.routers.frontpage.rule=Host(`frontpage.oopatech.com`)"
       - "traefik.http.routers.frontpage.entrypoints=websecure"
       - "traefik.http.routers.frontpage.tls.certresolver=myresolver"
+      - "traefik.http.routers.frontpage.priority=100"
     networks:
       - webproxy
 
@@ -83,9 +84,10 @@ services:
       - /app/production/env_files/admin/admin.production.env:/var/www/.env:ro
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.admin.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.oopatech.com`) || HostRegexp(`{customdomain:[a-z0-9.-]+}`)"
+      - "traefik.http.routers.admin.rule=HostRegexp(`^[a-z0-9-]+\\.oopatech\\.com$`)"
       - "traefik.http.routers.admin.entrypoints=websecure"
       - "traefik.http.routers.admin.tls.certresolver=myresolver"
+      - "traefik.http.routers.admin.priority=10"
     networks:
       - webproxy
 

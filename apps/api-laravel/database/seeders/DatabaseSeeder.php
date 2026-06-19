@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PayFacsTableSeeder::class);
         $this->call(PluginsTableSeeder::class);
 
-        if (config('app.env') !== 'production') {
+        if (!str_contains(config('app.env'), 'prod')) {
             $this->call(UsersTableSeeder::class);
             $this->call(PlansTableSeeder::class);
         }

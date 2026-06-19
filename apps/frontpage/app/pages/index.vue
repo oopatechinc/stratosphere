@@ -5,13 +5,12 @@ const config = useRuntimeConfig()
 const {domain, pageContent} = storeToRefs(useDomainStore())
 const {fetch, getSubdomain} = useDomainStore()
 
-// const subdomain = getSubdomain()
-const subdomain = 'jmgroup'
+const subdomain = getSubdomain()
 
 if (subdomain === config.public.appSubdomain) {
   pageContent.value = 'underConstruction'
 } else {
-  await fetch(subdomain)
+  await fetch(subdomain as string)
 }
 
 </script>

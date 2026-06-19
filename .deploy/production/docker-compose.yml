@@ -21,8 +21,8 @@ services:
   api-laravel:
     image: registry.digitalocean.com/stratosphere/api-laravel:latest
     restart: always
-    environment:
-      - APP_ENV=production
+    env_file:
+      - /app/production/api.production.env
     labels:
       - "traefik.enable=true"
       # 1. Listen for the specific API domain
@@ -38,6 +38,23 @@ services:
       - "traefik.http.routers.api.middlewares=api-buffering"
     networks:
       - webproxy
+
+  pgsql:
+    image: 'postgres:17-alpine'
+    ports:
+      - '${FORWARD_DB_PORT:-5432}:5432'
+    environment:
+      POSTGRES_DB: '${DB_DATABASE}'
+      POSTGRES_USER: '${DB_USERNAME}'
+      POSTGRES_PASSWORD: '${DB_PASSWORD}'
+    volumes:
+      - 'stratosphere-pgsql:/var/lib/postgresql/data'
+    networks:
+      - webproxy
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${DB_USERNAME} -d ${DB_DATABASE}" ]
+      retries: 3
+      timeout: 5s
 
   frontpage:
     image: registry.digitalocean.com/stratosphere/frontpage:latest
@@ -64,3 +81,7 @@ services:
 networks:
   webproxy:
     driver: bridge
+
+volumes:
+  stratosphere-pgsql:
+    driver: local

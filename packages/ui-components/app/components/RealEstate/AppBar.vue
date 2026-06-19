@@ -36,7 +36,7 @@ const navLinks = [
           <div class="logo-box bg-primary px-2 py-1 rounded text-white font-weight-black text-uppercase">
             JD
           </div>
-          <span class="font-weight-bold text-h6 text-white tracking-widest font-outfit uppercase">Jane Doe</span>
+          <span class="font-weight-bold text-h6 text-white tracking-widest font-outfit uppercase">Keniel St Louis</span>
         </div>
       </v-app-bar-title>
 

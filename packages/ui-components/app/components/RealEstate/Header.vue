@@ -26,10 +26,11 @@ const display = useDisplay()
             <v-col cols="12" md="8" lg="6">
               <div class="content-box">
                 <span class="text-primary text-uppercase font-weight-bold tracking-widest mb-4 d-block animate-fade-in">
-                  Exclusive Luxury Estates
+<!--                  Exclusive Luxury Estates-->
+                  Exclusive Residential Buildings
                 </span>
                 <h1 class="hero-title text-white font-outfit mb-6 animate-slide-up">
-                  Jane Doe
+                  Keniel St Louis
                 </h1>
                 <div class="subtitle-box border-s-4 border-primary ps-6 mb-10">
                   <p class="text-h5 text-white font-weight-light mb-2">
@@ -43,15 +44,15 @@ const display = useDisplay()
                 <div class="d-flex flex-wrap ga-6 mb-10">
                   <div class="contact-item">
                     <span class="text-caption text-uppercase opacity-50 d-block mb-1">Office</span>
-                    <span class="text-white font-weight-bold">514.555.0123</span>
+                    <span class="text-white font-weight-bold">514.914.8365</span>
                   </div>
-                  <div class="contact-item">
-                    <span class="text-caption text-uppercase opacity-50 d-block mb-1">Mobile</span>
-                    <span class="text-white font-weight-bold">514.555.0199</span>
-                  </div>
+<!--                  <div class="contact-item">-->
+<!--                    <span class="text-caption text-uppercase opacity-50 d-block mb-1">Mobile</span>-->
+<!--                    <span class="text-white font-weight-bold">514.914.8365</span>-->
+<!--                  </div>-->
                   <div class="contact-item">
                     <span class="text-caption text-uppercase opacity-50 d-block mb-1">Email</span>
-                    <span class="text-white font-weight-bold">jane@doe.realestate</span>
+                    <span class="text-white font-weight-bold">kenielstls6@gmail.com</span>
                   </div>
                 </div>
 
@@ -67,9 +68,9 @@ const display = useDisplay()
                   </v-btn>
                   
                   <div class="social-icons d-flex ga-2">
-                    <v-btn icon="mdi-facebook" variant="text" color="white" size="small" />
-                    <v-btn icon="mdi-instagram" variant="text" color="white" size="small" />
-                    <v-btn icon="mdi-linkedin" variant="text" color="white" size="small" />
+                    <v-btn icon="mdi-facebook" variant="text" color="white" size="small" href="https://instagram.com/kenielstlouis" target="_blank"/>
+<!--                    <v-btn icon="mdi-instagram" variant="text" color="white" size="small" />-->
+<!--                    <v-btn icon="mdi-linkedin" variant="text" color="white" size="small" />-->
                   </div>
                 </div>
               </div>

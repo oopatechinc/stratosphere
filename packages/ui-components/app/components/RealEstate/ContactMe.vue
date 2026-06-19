@@ -32,7 +32,7 @@ const props = defineProps<{
               <v-btn icon="mdi-phone" color="primary" variant="flat" rounded="circle" />
               <div>
                 <div class="text-caption text-uppercase opacity-50">Call Me</div>
-                <div class="text-h6 font-weight-bold">{{ fields?.phone || '514.555.0123' }}</div>
+                <div class="text-h6 font-weight-bold">{{ fields?.phone || '514.914.8365' }}</div>
               </div>
             </div>
             
@@ -40,7 +40,7 @@ const props = defineProps<{
               <v-btn icon="mdi-email" color="primary" variant="flat" rounded="circle" />
               <div>
                 <div class="text-caption text-uppercase opacity-50">Email Me</div>
-                <div class="text-h6 font-weight-bold">{{ fields?.email || 'jane@doe.realestate' }}</div>
+                <div class="text-h6 font-weight-bold">{{ fields?.email || 'kenielstls6@gmail.com' }}</div>
               </div>
             </div>
             
@@ -48,7 +48,7 @@ const props = defineProps<{
               <v-btn icon="mdi-map-marker" color="primary" variant="flat" rounded="circle" />
               <div>
                 <div class="text-caption text-uppercase opacity-50">Visit Office</div>
-                <div class="text-h6 font-weight-bold">1234 Luxury Way, Beverly Hills, CA</div>
+                <div class="text-h6 font-weight-bold">755 Boulevard St John, Point Claire, Quebec</div>
               </div>
             </div>
           </div>
@@ -83,7 +83,7 @@ const props = defineProps<{
       <v-container class="px-md-12">
         <div class="d-flex flex-wrap justify-space-between align-center ga-4">
           <div class="opacity-50 text-caption">
-            © 2026 Jane Doe Real Estate. All rights reserved.
+            © 2026 Keniel St Louis Real Estate. All rights reserved.
           </div>
           <div class="social-links d-flex ga-4">
             <a href="#" class="text-white opacity-50 hover-opacity-100 transition-all">Privacy Policy</a>

@@ -11,8 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n'
   ],
   sanctum: {
-    mode: 'token',
-    baseUrl: 'https://api.oopatech88.com/api',
+    mode: 'token'
   },
   imports: {
     dirs: ['stores']

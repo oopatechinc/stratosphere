@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         '@stratosphere/core-layer': resolve('../../packages/core-layer/app')
     },
     sanctum: {
-        baseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
+        baseUrl: 'https://api.oopatech.com/api',
         endpoints: {
             login: '/auth/login',
             logout: '/auth/logout',

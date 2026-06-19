@@ -12,6 +12,6 @@ export default defineNuxtConfig({
         '@stratosphere/ui-components',
     ],
     sanctum: {
-        baseUrl: import.meta.env.API_BASE_URL
+        baseUrl: 'https://api.oopatech99.com/api',
     }
 })

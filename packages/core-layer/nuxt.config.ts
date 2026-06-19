@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   ],
   sanctum: {
     mode: 'token',
+    baseUrl: 'https://api.oopatech88.com/api',
   },
   imports: {
     dirs: ['stores']

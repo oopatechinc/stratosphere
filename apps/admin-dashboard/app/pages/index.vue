@@ -10,8 +10,8 @@ const {genericRequiredRule, emailRequiredRules} = useValidationRules()
 
 const localePath = useLocalePath()
 
-const email = ref('john@doe.com')
-const password = ref('john123')
+const email = ref('')
+const password = ref('')
 const formValidity = ref(null)
 
 const turnstileToken = ref()

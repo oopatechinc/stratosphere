@@ -70,7 +70,7 @@ services:
       - /app/production/env_files/frontpage/frontpage.production.env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.frontpage.rule=HostRegexp(`^[a-z0-9-]+\\.oopatech\\.com$`)"
+      - "traefik.http.routers.frontpage.rule=HostRegexp(`kenielstlouis.oopatech.com`) || HostRegexp(`^[a-z0-9-]+\\.oopatech\\.com$`)"
       - "traefik.http.routers.frontpage.entrypoints=websecure"
       - "traefik.http.routers.frontpage.tls.certresolver=myresolver"
       - "traefik.http.routers.frontpage.priority=10"

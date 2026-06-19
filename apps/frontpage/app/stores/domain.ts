@@ -1,4 +1,4 @@
-import {ref} from "#imports"
+import { ref } from "#imports"
 
 export const useDomainStore = defineStore('domain', () => {
     const domain = ref()

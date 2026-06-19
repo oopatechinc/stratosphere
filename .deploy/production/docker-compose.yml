@@ -15,6 +15,8 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
       - ./letsencrypt:/letsencrypt
+    networks:
+      - webproxy
 
   api-laravel:
     image: registry.digitalocean.com/stratosphere/api-laravel:latest
@@ -34,6 +36,8 @@ services:
       # 3. Optional: Increase the max upload size for API requests (e.g., 50MB for file uploads)
       - "traefik.http.middlewares.api-buffering.buffering.maxRequestBodyBytes=52428800"
       - "traefik.http.routers.api.middlewares=api-buffering"
+    networks:
+      - webproxy
 
   frontpage:
     image: registry.digitalocean.com/stratosphere/frontpage:latest
@@ -43,6 +47,8 @@ services:
       - "traefik.http.routers.frontpage.rule=Host(`frontpage.oopatech.com`)"
       - "traefik.http.routers.frontpage.entrypoints=websecure"
       - "traefik.http.routers.frontpage.tls.certresolver=myresolver"
+    networks:
+      - webproxy
 
   admin-dashboard:
     image: registry.digitalocean.com/stratosphere/admin-dashboard:latest
@@ -52,3 +58,9 @@ services:
       - "traefik.http.routers.admin.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.oopatech.com`) || HostRegexp(`{customdomain:[a-z0-9.-]+}`)"
       - "traefik.http.routers.admin.entrypoints=websecure"
       - "traefik.http.routers.admin.tls.certresolver=myresolver"
+    networks:
+      - webproxy
+
+networks:
+  webproxy:
+    driver: bridge

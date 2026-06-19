@@ -21,6 +21,19 @@ services:
     restart: always
     environment:
       - APP_ENV=production
+    labels:
+      - "traefik.enable=true"
+      # 1. Listen for the specific API domain
+      - "traefik.http.routers.api.rule=Host(`api.oopatech.com`)"
+      - "traefik.http.routers.api.entrypoints=websecure"
+      - "traefik.http.routers.api.tls.certresolver=myresolver"
+
+      # 2. Tell Traefik which port your containerized Nginx/Apache/Octane is listening on
+      - "traefik.http.services.api.loadbalancer.server.port=80"
+
+      # 3. Optional: Increase the max upload size for API requests (e.g., 50MB for file uploads)
+      - "traefik.http.middlewares.api-buffering.buffering.maxRequestBodyBytes=52428800"
+      - "traefik.http.routers.api.middlewares=api-buffering"
 
   frontpage:
     image: registry.digitalocean.com/stratosphere/frontpage:latest

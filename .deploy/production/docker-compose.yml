@@ -52,10 +52,8 @@ services:
     image: 'postgres:17-alpine'
     ports:
       - '${FORWARD_DB_PORT:-5432}:5432'
-    environment:
-      POSTGRES_DB: '${DB_DATABASE}'
-      POSTGRES_USER: '${DB_USERNAME}'
-      POSTGRES_PASSWORD: '${DB_PASSWORD}'
+    env_file:
+      - /app/production/env_files/postgres/postgres.production.env
     volumes:
       - 'stratosphere-pgsql:/var/lib/postgresql/data'
     networks:

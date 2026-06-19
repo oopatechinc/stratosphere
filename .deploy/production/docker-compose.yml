@@ -4,8 +4,17 @@ services:
     command:
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
+
+      # 1. Define the Entrypoints
       - "--entrypoints.web.address=:80"
       - "--entrypoints.websecure.address=:443"
+
+      # 2. Add the Global HTTP -> HTTPS Redirect
+      - "--entrypoints.web.http.redirections.entryPoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entryPoint.scheme=https"
+      - "--entrypoints.web.http.redirections.entryPoint.permanent=true"
+
+      # 3. Let's Encrypt / ACME setup
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.email=support@oopatech.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
@@ -21,8 +30,8 @@ services:
   api-laravel:
     image: registry.digitalocean.com/stratosphere/api-laravel:latest
     restart: always
-    env_file:
-      - /app/production/api.production.env
+    volumes:
+      - /app/production/api.production.env:/var/www/html/.env:ro
     labels:
       - "traefik.enable=true"
       # 1. Listen for the specific API domain

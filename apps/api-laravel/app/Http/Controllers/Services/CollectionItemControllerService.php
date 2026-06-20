@@ -14,6 +14,7 @@ class CollectionItemControllerService
     {
         return CollectionItem::query()
             ->where('collection_type', $type)
+            ->with('images')
             ->get();
     }
 

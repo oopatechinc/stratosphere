@@ -44,15 +44,6 @@ const items = computed(() => {
       },
       {
         props: {
-          title: t('app.navigation_drawer.agent'),
-          value: "agent",
-          prependIcon: "mdi-account-group-outline",
-          to: localePath("/dashboard/agent")
-        },
-        childItems: []
-      },
-      {
-        props: {
           title: t('app.navigation_drawer.online'),
           value: "online",
           prependIcon: "mdi-web",

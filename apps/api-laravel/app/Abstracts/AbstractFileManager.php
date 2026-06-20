@@ -20,7 +20,7 @@ abstract class AbstractFileManager
         protected Model $entity,
         protected UploadedFile|string $file
     ) {
-        $this->tenantId = Auth::user()->staff()->first()->tenant_id;
+        $this->tenantId = (int)Auth::user()->tenant_id;
         $this->setSubPath();
     }
 

@@ -66,9 +66,6 @@ export const useCollectionItemsForm = async (type: string, returnUrl: string) =>
                 await collectionsStore.update(response as CollectionItem)
             }
 
-
-
-
             await collectionsStore.update(collection)
         }
         navigateTo(localePath('dashboard/properties'))

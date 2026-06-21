@@ -76,6 +76,8 @@ Route::middleware([
     'tenancy.header',
 ])->group(function () {
     Route::get('/websites/{id}', [WebsiteController::class, 'show']);
+    Route::get('/collections/{type}', [CollectionItemController::class, 'index']);
+
 
     Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('tenants/{tenant}', [TenantController::class, 'show']);
@@ -125,7 +127,6 @@ Route::middleware([
 
         Route::post('stripe/check-subscription-status', [StripeController::class, 'checkSubscriptionStatus']);
 
-        Route::get('/collections/{type}', [CollectionItemController::class, 'index']);
         Route::apiResource('/collections', CollectionItemController::class)->except(['index']);
 
     });

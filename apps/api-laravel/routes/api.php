@@ -99,7 +99,6 @@ Route::middleware([
         Route::post('service/{service}/toggle-categories', [ServiceController::class, 'toggleCategories']);
         Route::post('staffs/{staff}/sync-services', [StaffController::class, 'syncServices']);
 
-
         Route::apiResource('users', UserController::class);
         Route::apiResource('staffs', StaffController::class);
 
@@ -127,7 +126,7 @@ Route::middleware([
         Route::post('stripe/check-subscription-status', [StripeController::class, 'checkSubscriptionStatus']);
 
         Route::get('/collections/{type}', [CollectionItemController::class, 'index']);
-        Route::post('/collections', [CollectionItemController::class, 'store']);
+        Route::apiResource('/collections', CollectionItemController::class)->except(['index']);
 
     });
 });

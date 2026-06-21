@@ -1,9 +1,11 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   sectionId: string
   fields: any
   styles: any
 }>()
+
+debugger
 </script>
 
 <template>

@@ -11,7 +11,7 @@ abstract class AbstractFileManager
 {
     protected string $subPath;
     protected string $imageUrl;
-    protected int $tenantId;
+    protected string $tenantId;
     protected bool $deleteFromCloud = false;
 
     protected string $fileSystemDisk = 's3';

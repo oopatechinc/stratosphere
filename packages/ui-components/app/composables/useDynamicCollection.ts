@@ -27,7 +27,7 @@ export const useDynamicCollection = (dataSource: DataSource, mappings: Mappings,
       items.value = data.map((item: any) => {
         const mapped: any = { id: item.id }
         Object.keys(mappings).forEach(key => {
-          mapped[key] = item.content[mappings[key]]
+          mapped[key] = item[mappings[key]]
         })
         return mapped
       })

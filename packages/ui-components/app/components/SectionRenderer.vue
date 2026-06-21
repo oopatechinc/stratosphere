@@ -21,7 +21,6 @@ const componentMap: Record<string, any> = {
   'RealEstateAppBar': resolveComponent('RealEstateAppBar'),
   'RealEstateHeader': resolveComponent('RealEstateHeader'),
   'RealEstateAboutMe': resolveComponent('RealEstateAboutMe'),
-  'RealEstateProperties': resolveComponent('RealEstateProperties'),
   'RealEstateTestimonials': resolveComponent('RealEstateTestimonials'),
   'RealEstateContactMe': resolveComponent('RealEstateContactMe'),
   'RealEstateActionCards': resolveComponent('RealEstateActionCards'),

@@ -26,7 +26,7 @@ const form = ref<CollectionItem>({
     <VForm v-model="formValidity" validate-on="blur lazy" @submit.prevent="handleSubmit(form)">
       <VCard flat>
         <VCardTitle class="d-flex justify-space-between">
-          <VBtn icon flat to="/dashboard/services">
+          <VBtn icon flat to="/dashboard/properties">
             <VIcon>mdi-close</VIcon>
           </VBtn>
           <VBtn flat variant="outlined" rounded prepend-icon="mdi-cloud" type="submit">
@@ -51,7 +51,12 @@ const form = ref<CollectionItem>({
 
               <VRow v-if="isNewMode">
                 <VCol>
-                  <VFileUpload v-model="images" density="compact" multiple clearable/>
+                  <VFileUpload
+                      v-model="images"
+                      density="compact"
+                      multiple
+                      clearable
+                  />
                 </VCol>
               </VRow>
 

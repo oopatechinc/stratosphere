@@ -23,4 +23,9 @@ class CollectionItemController extends Controller
     {
         return $this->service->store($request->validated());
     }
+
+    public function destroy($id)
+    {
+        $this->service->destroy($id);
+    }
 }

@@ -51,7 +51,7 @@ export const useCollectionsStore = defineStore('collections', () => {
 
     async function update(collectionItem: CollectionItem, updateApi = false) {
         if (updateApi) {
-             await client<CollectionItem>(`properties/${collectionItem.id}`, {method: 'PUT', body: collectionItem})
+             await client<CollectionItem>(`/collections//${collectionItem.id}`, {method: 'PUT', body: collectionItem})
         }
 
         const index = collectionItems.value.findIndex(p => p.id === collectionItem.id)
@@ -59,6 +59,17 @@ export const useCollectionsStore = defineStore('collections', () => {
         collectionItems.value[index] = collectionItem
     }
 
-    return {loading, collectionItems, fetch, store, update, getOne}
+    async function destroy(collectionItemId: number, updateApi = false) {
+        if (updateApi) {
+             await client(`/collections/${collectionItemId}`, {method: 'DELETE'})
+        }
+
+        debugger
+        const index = collectionItems.value.findIndex(p => p.id === collectionItemId)
+        if (index == -1) return
+        collectionItems.value.splice(index, 1)
+    }
+
+    return {loading, collectionItems, fetch, getOne, store, update, destroy}
 })
 

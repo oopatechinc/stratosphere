@@ -44,13 +44,10 @@ class WebsiteOnboardingController extends Controller
                                 'endpoint' => '/collections/properties'
                             ],
                             'mappings' => [
-                                'name' => 'name',
-                                'price' => 'price',
-                                'address' => 'address',
-                                'beds' => 'beds',
-                                'baths' => 'baths',
-                                'rooms' => 'rooms',
+                                'id' => 'id',
+                                'content' => 'content',
                                 'images' => 'images',
+                                'collection_type' => 'collection_type'
                             ]
                         ], 'styles' => ['bg_color' => '#ffffff', 'text_color' => '#000000']],
                         ['id' => 'testimonials', 'fields' => ['items' => [

@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers\Services;
 
-use App\Http\Controllers\FetchManagers\CollectionItemFetchManager;
 use App\Models\CollectionItem;
-use App\Models\Property;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 
@@ -21,5 +19,10 @@ class CollectionItemControllerService
     public function store(array $payload): Model
     {
         return CollectionItem::query()->create($payload);
+    }
+
+    public function destroy(int $id)
+    {
+        CollectionItem::query()->findOrFail($id)->delete();
     }
 }

@@ -7,6 +7,7 @@ export const useCollectionItemsForm = async (type: string, returnUrl: string) =>
     const fileService = useFileService()
     const {displayErrorMessage, displaySuccessMessage} = useSnackbarStore()
     const {t} = useI18n()
+    const localePath = useLocalePath()
 
     const formValidity = ref(null)
     const id = route.params.id
@@ -70,7 +71,7 @@ export const useCollectionItemsForm = async (type: string, returnUrl: string) =>
 
             await collectionsStore.update(collection)
         }
-
+        navigateTo(localePath('dashboard/properties'))
         displaySuccessMessage('Your property has been created')
     }
 

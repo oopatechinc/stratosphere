@@ -7,7 +7,9 @@ const {collectionItems} = storeToRefs(store)
 
 await store.fetch('properties')
 
-
+async function handleDelete(propertyItemId: string) {
+  await store.destroy(Number(propertyItemId), true)
+}
 </script>
 
 <template>
@@ -27,10 +29,14 @@ await store.fetch('properties')
         </div>
       </VCardText>
     </VCard>
-    <VCard v-else class="mt-10 pb-2 mx-4" flat>
+    <VCard v-else class="mt-10 pb-2 px-1" flat>
       <VRow>
-        <VCol v-for="(property, i) in collectionItems" :key="i" cols="12" md="6" lg="4">
-          <PropertyCard v-model="collectionItems[i]" />
+        <VCol v-for="(item, i) in collectionItems" :key="i" cols="12" md="6" lg="4">
+          <GenericCollectionCardProperty
+              :item="item"
+              :show-buttons="true"
+              @delete="handleDelete"
+          />
         </VCol>
       </VRow>
     </VCard>

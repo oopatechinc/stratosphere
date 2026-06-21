@@ -14,6 +14,16 @@ class CollectionItemImage extends Model
         'url'
     ];
 
+    protected static function boot()
+    {
+        parent::boot();
+        static::deleting(function (CollectionItemImage $image) {
+            (new AwsFileService())
+                ->setUrl($image->url)
+                ->delete();
+        });
+    }
+
     public function url(): Attribute
     {
         return Attribute::make(

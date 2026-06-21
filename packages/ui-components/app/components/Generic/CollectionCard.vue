@@ -3,11 +3,14 @@ interface Props {
   item: object,
   sectionId: string
 }
-const props = defineProps<Props>()
-
-console.log('items', props.item)
+defineProps<Props>()
 </script>
 
 <template>
-  <GenericCollectionCardProperty v-if="sectionId=='dynamic_properties'" :item="item"/>
+  <GenericCollectionCardProperty
+      v-if="sectionId=='dynamic_properties'"
+      :item="item"
+      :show-edit-buttons="false"
+      :flat="true"
+  />
 </template>

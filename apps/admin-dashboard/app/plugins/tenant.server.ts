@@ -8,12 +8,20 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     // In production, this might call a fast cache database like Redis or an internal API endpoint.
     let tenantKey = 'default'
     if (host.includes('bookisia')) tenantKey = 'bookisia'
+    if (host.includes('oopatech')) tenantKey = 'oopatech'
     if (host.includes('brokeryhub')) tenantKey = 'brokeryhub'
 
     // 3. Load or fetch tenant metadata profile
     const tenantConfigs: Record<string, any> = {
         bookisia: {
             id: 'bookisia',
+            name: 'Bookisia Admin',
+            logo: '/images/bookisia/bookisia-logo.svg',
+            theme: { primary: '#6200EE', secondary: '#03DAC6', background: '#F5F5F5' },
+            layout: 'split-screen'
+        },
+        oopatech: {
+            id: 'oopatech',
             name: 'Bookisia Admin',
             logo: '/images/bookisia/bookisia-logo.svg',
             theme: { primary: '#6200EE', secondary: '#03DAC6', background: '#F5F5F5' },

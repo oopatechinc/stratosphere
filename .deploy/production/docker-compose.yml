@@ -84,7 +84,7 @@ services:
       - /app/production/env_files/admin/admin.production.env
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.admin.rule=Host(`admin.oopatech.com`)"
+      - "traefik.http.routers.admin.rule=Host(`admin.oopatech.com`) || Host(`admin.brokeryhub.com`)"
       - "traefik.http.routers.admin.entrypoints=websecure"
       - "traefik.http.routers.admin.tls.certresolver=myresolver"
       - "traefik.http.routers.admin.priority=100"

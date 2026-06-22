@@ -39,7 +39,7 @@ async function login() {
     <VCard tile color="black" class="d-flex flex-row align-center justify-space-between">
 
       <VCard tile class="image-login">
-        <VCarousel hide-delimiters :show-arrows="false" class="fill-height" cycle continuous>
+        <VCarousel hide-delimiters :show-arrows="false" height="100vh" cycle continuous>
           <VCarouselItem src="/images/barbershop.jpg" height="100vh" cover/>
           <VCarouselItem src="/images/login-slide-2.jpg" height="100vh" cover/>
           <VCarouselItem src="/images/login-slide-3.jpg" height="100vh" cover/>

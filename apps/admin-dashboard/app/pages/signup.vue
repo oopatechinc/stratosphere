@@ -55,7 +55,7 @@ async function signup() {
 
           <div class="form-login-container text-center">
 
-            <VImg src="/images/logo.svg" alt="logo"/>
+            <VImg src="/images/bookisia/bookisia-logo.svg" alt="logo"/>
 
             <p class="mt-8 mb-2 font-weight-bold black--text sign-in-text">
               {{ $t("app.signup.left.title") }}

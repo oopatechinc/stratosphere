@@ -62,7 +62,7 @@ await factory?.handle()
           alt="Bookisia Logo"
           class="mx-auto py-4"
           contain
-          src="/images/logo.svg"
+          src="/images/bookisia/bookisia-logo.svg"
           transition="scale-transition"
           width="200"
       />

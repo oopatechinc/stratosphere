@@ -42,6 +42,7 @@ async function login() {
   if (!turnstileToken.value) {
     return useSnackbarStore().displayErrorMessage($t('app.signin.turnstile.validation_error'))
   }
+
   await useSanctumAuth().login({email: email.value, password: password.value} )
 }
 

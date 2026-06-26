@@ -7,6 +7,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     ctx.options.query = ctx.options.query || {}
     ctx.options.query.XDEBUG_SESSION_START = 1
 
+
     const user = useSanctumUser<User>()
     const isGetUserUrl = ctx.request.toString().includes('/user') && ctx.options.method === 'GET'
 

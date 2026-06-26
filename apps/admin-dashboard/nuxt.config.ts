@@ -1,11 +1,14 @@
 import { createResolver } from '@nuxt/kit'
+import {useRuntimeConfig} from ".nuxt/imports";
 const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: {enabled: true},
     extends: [
         '@stratosphere/ui-components',
-        '@stratosphere/core-layer'
+        '@stratosphere/core-layer',
+        './layers/bookisia',
+        './layers/brokeryhub'
     ],
     runtimeConfig: {
         public: {

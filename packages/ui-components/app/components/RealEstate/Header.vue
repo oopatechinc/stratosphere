@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   sectionId: string
   fields: any
   styles: any
 }>()
 
-const display = useDisplay()
 </script>
 
 <template>
@@ -15,7 +14,7 @@ const display = useDisplay()
   >
     <!-- Hero Image with Gradient Overlay -->
     <v-img
-      :src="fields?.image_url || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'"
+      :src="fields?.background_url || 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'"
       height="800"
       cover
       class="hero-image"
@@ -30,7 +29,7 @@ const display = useDisplay()
                   Exclusive Residential Buildings
                 </span>
                 <h1 class="hero-title text-white font-outfit mb-6 animate-slide-up">
-                  Keniel St Louis
+                  {{fields?.name ?? 'John Smith'}}
                 </h1>
                 <div class="subtitle-box border-s-4 border-primary ps-6 mb-10">
                   <p class="text-h5 text-white font-weight-light mb-2">
@@ -44,7 +43,7 @@ const display = useDisplay()
                 <div class="d-flex flex-wrap ga-6 mb-10">
                   <div class="contact-item">
                     <span class="text-caption text-uppercase opacity-50 d-block mb-1">Office</span>
-                    <span class="text-white font-weight-bold">514.914.8365</span>
+                    <span class="text-white font-weight-bold">{{fields?.phone_number ?? '514.222.3344'}}</span>
                   </div>
 <!--                  <div class="contact-item">-->
 <!--                    <span class="text-caption text-uppercase opacity-50 d-block mb-1">Mobile</span>-->
@@ -52,7 +51,7 @@ const display = useDisplay()
 <!--                  </div>-->
                   <div class="contact-item">
                     <span class="text-caption text-uppercase opacity-50 d-block mb-1">Email</span>
-                    <span class="text-white font-weight-bold">kenielstls6@gmail.com</span>
+                    <span class="text-white font-weight-bold">{{fields?.email ?? 'john@doe.com'}}</span>
                   </div>
                 </div>
 

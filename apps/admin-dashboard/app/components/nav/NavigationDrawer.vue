@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import {useTenantStore} from "#imports";
 import type {User} from "@stratosphere/core-layer/types";
 
 const localePath = useLocalePath()

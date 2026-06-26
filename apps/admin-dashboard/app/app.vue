@@ -15,7 +15,7 @@ if (tenant.value) {
   }
 
   // Set active global theme to our dynamic override
-  theme.global.name.value = 'dynamicTenant'
+  theme.change('dynamicTenant')
 }
 </script>
 <template>

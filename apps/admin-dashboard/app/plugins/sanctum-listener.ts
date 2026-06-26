@@ -8,7 +8,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     ctx.options.query.XDEBUG_SESSION_START = 1
 
     const user = useSanctumUser<User>()
-    const isGetUserUrl = ctx.request.toString().includes('/user')
+    const isGetUserUrl = ctx.request.toString().includes('/user') && ctx.options.method === 'GET'
 
     if (!isGetUserUrl && user.value?.tenant_id) {
       ctx.options.headers.append('X-Tenant-ID', String(user.value?.tenant_id))

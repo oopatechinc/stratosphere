@@ -12,7 +12,6 @@ const currentStaff = computed(() => {
 })
 
 
-
 const staffImage = currentStaff.value?.image_url
     ?? 'https://bookisia-public.s3.ca-central-1.amazonaws.com/images/user/default.png'
 
@@ -29,7 +28,3 @@ const staffImage = currentStaff.value?.image_url
     <UserForm v-model="user as User" />
   </div>
 </template>
-
-<style scoped>
-
-</style>

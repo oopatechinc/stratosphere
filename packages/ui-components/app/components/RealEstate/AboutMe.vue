@@ -19,7 +19,7 @@ const props = defineProps<{
         <v-col cols="12" md="5">
           <div class="image-stack position-relative">
             <v-img
-              src="https://bookisia-public.s3.ca-central-1.amazonaws.com/images/user/Keniel.png"
+              :src="fields?.image_url ?? 'https://bookisia-public.s3.ca-central-1.amazonaws.com/images/user/Keniel.png'"
               height="600"
               cover
               class="main-image rounded-0"

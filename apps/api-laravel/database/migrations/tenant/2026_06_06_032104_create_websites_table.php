@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('template_id');
             $table->unsignedBigInteger('theme_id');
             $table->unsignedBigInteger('domain_id');
+            $table->foreignId('staff_id')->nullable()->constrained();
             $table->json('active_config');
             $table->timestamps();
         });

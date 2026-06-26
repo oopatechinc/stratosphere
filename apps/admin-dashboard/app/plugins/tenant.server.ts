@@ -31,7 +31,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
             id: 'brokeryhub',
             name: 'BrokeryHub Terminal',
             logo: '/images/brokery-hub/brokery-hub-logo.png',
-            theme: { primary: '#ff9800', secondary: '#E91E63', background: '#121212' },
+            theme: { primary: '#ff9800', secondary: '#E91E63', background: '#F5F5F5' },
             layout: 'centered'
         }
     }

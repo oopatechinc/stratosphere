@@ -4,8 +4,6 @@ defineProps<{
   fields: any
   styles: any
 }>()
-
-debugger
 </script>
 
 <template>

@@ -16,7 +16,7 @@ export const useEditorStore = defineStore('editor', {
         const data = await client<any>(`/websites/${id}`)
         this.website = data
         this.blueprint = data.theme.blueprint
-        this.draftConfig = JSON.parse(JSON.stringify(data.active_config))
+        this.draftConfig = JSON.parse(JSON.stringify(data.config))
       } catch (error) {
         console.error('Failed to fetch website', error)
       } finally {

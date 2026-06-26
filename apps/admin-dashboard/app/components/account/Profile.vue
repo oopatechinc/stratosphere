@@ -25,6 +25,6 @@ const staffImage = currentStaff.value?.image_url
         :entity-id="currentStaff.id"
         class="mb-8"
     />
-    <UserForm v-model="user as User" />
+    <UserForm v-model="user" />
   </div>
 </template>

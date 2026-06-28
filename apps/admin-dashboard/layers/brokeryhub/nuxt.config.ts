@@ -2,13 +2,9 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-    // 1. Explicitly opt into Nuxt 4 folder structures for this layer
     future: {
         compatibilityVersion: 4,
     },
-
-    // 2. Add metadata or configuration options specific to this vertical
-    // This runtimeConfig merges automatically into the main app's runtimeConfig
     runtimeConfig: {
         public: {
             bookisia: {
@@ -19,11 +15,27 @@ export default defineNuxtConfig({
             }
         }
     },
-
-    // 3. Layer-isolated auto-imports or layout overrides (optional)
-    // If Bookisia needs access to specific third-party components or styling assets
-    // that other layers shouldn't care about, you can declare them here.
+    modules: ['@nuxtjs/i18n'],
     css: [
         // './app/assets/css/bookisia-overrides.css' // if you have unique css tweaks
     ],
+    i18n: {
+        langDir: 'locales',
+        strategy: 'prefix_except_default',
+        locales: [
+            {
+                code: 'en-US',
+                iso: 'en-US',
+                name: 'English(US)',
+                file: 'en-US.json',
+            },
+            {
+                code: 'fr-CA',
+                iso: 'fr-CA',
+                name: 'French(CA)',
+                file: 'fr-CA.json',
+            },
+        ],
+        defaultLocale: 'en-US',
+    },
 })

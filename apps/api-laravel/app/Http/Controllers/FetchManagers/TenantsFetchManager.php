@@ -21,6 +21,7 @@ class TenantsFetchManager extends AbstractFetchManager
     public function apply()
     {
         $this->query->with('vertical.industry');
+        $this->query->with('subscription.plan');
         return $this;
     }
 }

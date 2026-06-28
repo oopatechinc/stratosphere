@@ -1,0 +1,198 @@
+{
+  "shared_components_module": {
+    "pricing": {
+      "title": "Pick the right plan for your business",
+      "per_team_member": "Per team member",
+      "plans": {
+        "action_btn": "Start Free Trial",
+        "teams_include_text": "Everything in Solo, and:",
+        "items": [
+          {
+            "name": "Solo",
+            "subtitle": "For one-person businesses",
+            "price": "CA$29.99",
+            "price_text": "per month",
+            "text": "",
+            "features": [
+              "Marketplace booking page",
+              "Business Booking website",
+              "Timezone-optimized bookings",
+              "Sync appointment with calendars",
+              "Connect Stripe for Payments",
+              "Email & SMS notifications"
+            ]
+          },
+          {
+            "name": "Teams",
+            "subtitle": "For growing teams",
+            "price": "CA$19.99",
+            "price_text": "per team member monthly",
+            "text": "",
+            "features": [
+              "Staff Management",
+              "Customized schedule for each staff",
+              "New Staff Invitation",
+              "Personalized calendar for each staff",
+              "Ability for staff to use their own Stripe account"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "subtitle": "For large companies",
+            "price": "Custom rates",
+            "price_text": "",
+            "caption": "",
+            "text": "Enterprise solutions available for high-volume businesses with over 20 team members ",
+            "features": []
+          }
+        ]
+      },
+      "features": {
+        "title": "Features",
+        "plans": "Plans",
+        "solo": "Solo",
+        "teams": "Teams",
+        "items": [
+          {
+            "type": "header",
+            "name": "Scheduling",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Email notifications",
+            "description": "Your customers will get a timely email reminder of their upcoming booking. To minimize no-shows",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Timezone-optimized bookings",
+            "description": "Your booking times will be translated to the timezone of your customer's location. ",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Block off breaks and personal time",
+            "description": "Block off times for those moments when you need it",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "SMS notifications",
+            "description": "Your customers will get a timely sms reminder of their upcoming booking. To minimize no-shows",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Customized schedule for each staff",
+            "description": "Your employees have the ability to customize their available opening hours and closing hours",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "header",
+            "name": "Online Bookings",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Booking website",
+            "description": "Choose from a list of curated website templates and customize to your business",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Marketplace booking page",
+            "description": "Get free placement on the Bookisia marketplace to boost your business",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Sync appointment with calendars",
+            "description": "When you add google calendar as an integration, a new event will automatically be added when your customers book your services",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "header",
+            "name": "Admin Tools",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Add new staff",
+            "description": "New employees get access to their own dashboard and can manage their hours and appointments",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Enforce business opening hours across staff",
+            "description": "Staff can modify their opening hours except if restricted by business",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Enforce single business calendar across staff",
+            "description": "Staff can use their own calendar except if restricted by business",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Service pricing and durations per employee ",
+            "description": "Staff can modify their pricing and service durations except if restricted by business",
+            "solo": false,
+            "team": true
+          }
+        ]
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "Can I upgrade/downgrade anytime?",
+          "answer": "Yes, if you feel your business would benefit from the features in another plan or you no longer require some features in a specific plan, you can upgrade or downgrade at anytime. You will be charged a prorated amount which takes into consideration the amount of days you spent on your current plan and the amount of time you will spend on the new plan before your next billing window."
+        },
+        {
+          "question": "I have an issue what do I do?",
+          "answer": "Our team of expert customer support are happy to help you with any questions you may have. You can call or reach out to us anytime."
+        },
+        {
+          "question": "Can I request a new feature?",
+          "answer": "We encourage our customers to reach out to us about any feature they would like to see on our platform. We are actively improving our platforms with new features and we welcome all suggestions offered to us by our customers."
+        },
+        {
+          "question": "How long does my free trial last?",
+          "answer": "Every plan comes with a 30 day free trial. You will get a notification three days before your trial expires. We value transparency and will notify you when your first charge is about to occur. After your trial expires, we will charge you automatically."
+        },
+        {
+          "question": "I want to host my store on a private domain",
+          "answer": "Every business on bookisia can choose to host their store on a private domain. Contact  our support team and we will begin the setup process."
+        },
+        {
+          "question": "I have signed up for a new plan. What next?",
+          "answer": "Congrats! Head over to your very own admin portal. There you can provide more information about your business. Add your staff and set your business hours. You can also upload your brand information such as your business logo so that it is shown on your bookisia website. "
+        }
+      ]
+    },
+    "dictionary": {
+      "month": "Month"
+    },
+    "stripe": {
+      "title": "Add New Payment Method",
+      "submit_btn": "Submit",
+      "notifications": {
+        "error": "There was an error while subscribing"
+      }
+    }
+  }
+}

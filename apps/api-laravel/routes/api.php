@@ -67,8 +67,21 @@ Route::middleware(['auth:sanctum'])->group(function () {
         return $user;
     });
 
+    Route::apiResource('users', UserController::class);
+
     Route::apiResource('tenants', TenantController::class)->except(['index', 'show']);
     Route::get('templates', [TemplateController::class, 'index']);
+
+    //Integrations
+    Route::post('integrations/get-oauth-url', [IntegrationController::class, 'getOauthUrl']);
+    Route::apiResource('integrations', IntegrationController::class);
+
+    Route::get('google/get-calendar-by-integration-id/{integrationId}', [GoogleApiController::class, 'getCalendarsByIntegrationId']);
+    Route::post('stripe/disconnect', [StripeController::class, 'disconnect']);
+    Route::post('stripe/create-checkout-session', [StripeController::class, 'createCheckoutSession']);
+
+    Route::post('stripe/check-subscription-status', [StripeController::class, 'checkSubscriptionStatus']);
+
 });
 
 
@@ -101,7 +114,6 @@ Route::middleware([
         Route::post('service/{service}/toggle-categories', [ServiceController::class, 'toggleCategories']);
         Route::post('staffs/{staff}/sync-services', [StaffController::class, 'syncServices']);
 
-        Route::apiResource('users', UserController::class);
         Route::apiResource('staffs', StaffController::class);
 
         Route::apiResource('services', ServiceController::class);
@@ -116,16 +128,6 @@ Route::middleware([
         Route::apiResource('locations', LocationController::class);
 
         Route::apiResource('appointments', AppointmentController::class)->except(['store']);
-
-        //Integrations
-        Route::post('integrations/get-oauth-url', [IntegrationController::class, 'getOauthUrl']);
-        Route::apiResource('integrations', IntegrationController::class);
-
-        Route::get('google/get-calendar-by-integration-id/{integrationId}', [GoogleApiController::class, 'getCalendarsByIntegrationId']);
-        Route::post('stripe/disconnect', [StripeController::class, 'disconnect']);
-        Route::post('stripe/create-checkout-session', [StripeController::class, 'createCheckoutSession']);
-
-        Route::post('stripe/check-subscription-status', [StripeController::class, 'checkSubscriptionStatus']);
 
         Route::apiResource('/collections', CollectionItemController::class)->except(['index']);
 

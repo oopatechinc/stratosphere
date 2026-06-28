@@ -18,6 +18,7 @@
     "vuetify-nuxt-module": "catalog:",
     "@nuxtjs/i18n": "catalog:",
     "dayjs-nuxt": "catalog:",
+    "@stripe/stripe-js": "catalog:",
     "@stratosphere/core-layer": "workspace:*"
   },
   "devDependencies": {

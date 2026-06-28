@@ -25,6 +25,7 @@ catalog:
   "crypto-js": "^4.2.0"
   "dayjs-nuxt": "^2.1.11"
   "@types/lodash-es": "^4.17.12"
+  "@stripe/stripe-js": "^9.5.0"
   "@stratosphere/ui-components": "workspace:*"
   "@stratosphere/core-layer": "workspace:*"
 minimumReleaseAgeExclude:

@@ -1,0 +1,193 @@
+{
+  "brokeryhub": {
+    "pricing": {
+      "title": "Pick the right plan for your agency",
+      "per_team_member": "Per team member",
+      "plans": {
+        "action_btn": "Start Free Trial",
+        "teams_include_text": "Everything in Starter, and:",
+        "items": [
+          {
+            "key": "brokery_hub_starter",
+            "name": "Starter",
+            "subtitle": "For new or solo agents",
+            "price": "$49",
+            "price_text": "per month",
+            "text": "",
+            "features": [
+              "Premium agent web template",
+              "BrokeryHub subdomain routing",
+              "Up to 5 manual listings",
+              "Standard contact lead form",
+              "Instant email notifications",
+              "Mobile-optimized design"
+            ]
+          },
+          {
+            "key": "brokery_hub_growth",
+            "name": "Growth",
+            "subtitle": "For highly active producers",
+            "price": "$89",
+            "price_text": "per month",
+            "text": "",
+            "features": [
+              "Connect custom domain name",
+              "Up to 25 manual listings",
+              "Instant SMS lead text alerts",
+              "Real estate CRM integrations",
+              "Custom property landing pages"
+            ]
+          },
+          {
+            "key": "brokery_hub_pro_team",
+            "name": "Pro / Team",
+            "subtitle": "For boutique multi-agent teams",
+            "price": "$159",
+            "price_text": "per month up to 3 seats",
+            "text": "",
+            "features": [
+              "Everything in Growth plan",
+              "Includes 3 agent sub-accounts",
+              "Unlimited manual property listings",
+              "Round-robin lead allocation",
+              "Hyper-local SEO blog module",
+              "Premium custom code overrides"
+            ]
+          }
+        ]
+      },
+      "features": {
+        "title": "Platform Features",
+        "plans": "Subscription Tiers",
+        "brokery_hub_starter": "Starter",
+        "growth": "Growth",
+        "pro_team": "Pro / Team",
+        "items": [
+          {
+            "type": "header",
+            "name": "Lead & Contact Capture",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Instant email notifications",
+            "description": "Receive comprehensive email notifications immediately when potential buyers or sellers submit your contact forms.",
+            "starter": true,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Instant SMS lead text alerts",
+            "description": "Maximize your speed-to-lead advantage with instant cellular text message notifications for every incoming inquiry.",
+            "starter": false,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Real estate CRM integrations",
+            "description": "Seamlessly route incoming lead contact data via webhooks directly into top industry tools like Follow Up Boss and kvCORE.",
+            "starter": false,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Round-robin lead allocation",
+            "description": "Automatically distribute incoming client emails and contact form submissions equally among your active team members.",
+            "starter": false,
+            "growth": false,
+            "pro_team": true
+          },
+          {
+            "type": "header",
+            "name": "Websites & Branding",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Premium agent web template",
+            "description": "Launch a sleek, high-conversion responsive website optimized specifically for showcasing listings and building trust.",
+            "starter": true,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Connect custom domain name",
+            "description": "Establish real digital equity by securely linking your own unique branding (e.g., www.yourname.com) directly to your page.",
+            "starter": false,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Hyper-local SEO blog module",
+            "description": "Publish neighborhood guides, market reviews, and localized updates to dominate organic regional search rankings.",
+            "starter": false,
+            "growth": false,
+            "pro_team": true
+          },
+          {
+            "type": "header",
+            "name": "Inventory & Management",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Manual property listings",
+            "description": "Upload, update, and manage your exclusive properties manually directly through your simple BrokeryHub dashboard.",
+            "starter": true,
+            "growth": true,
+            "pro_team": true
+          },
+          {
+            "type": "feature",
+            "name": "Multi-agent team seats",
+            "description": "Expand your operational footprint with isolated, collaborative dashboards for up to three team members or partners.",
+            "starter": false,
+            "growth": false,
+            "pro_team": true
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "Can I upgrade or downgrade my plan at any time?",
+            "answer": "Yes, absolutely. If your real estate pipeline shifts or you expand your team, you can change tiers instantly. Your subscription will be adjusted using a fair prorated calculation based on the remaining days left in your current billing cycle."
+          },
+          {
+            "question": "How fast do contact form notifications reach my phone?",
+            "answer": "Form submissions trigger alerts instantly. Standard email notifications deploy immediately, while our Growth and Pro tiers utilize premium routing to deliver automated SMS texts straight to your phone within seconds of a lead hitting your site."
+          },
+          {
+            "question": "Can I request new real estate integrations or tools?",
+            "answer": "We consistently evolve our software to match changing real estate trends. We welcome direct feature and workflow requests from our agents and frequently introduce new dashboard features, CRM integrations, and design widgets based on your ideas."
+          },
+          {
+            "question": "How long does my platform free trial last?",
+            "answer": "Every tier includes a 30-day free trial. To maintain absolute transparency, we will send you a reminder alert three days before your window closes. If you love the platform, your subscription will seamlessly activate once the trial period ends."
+          },
+          {
+            "question": "How do I launch my real estate site on a private domain?",
+            "answer": "Agents on our Growth and Pro tiers can connect their unique domain directly from the dashboard settings. If you need assistance, simply ping our support specialists, and we will happily handle the DNS records and secure mapping for you."
+          },
+          {
+            "question": "I just signed up for BrokeryHub. What happens next?",
+            "answer": "Welcome aboard! Head to your agent portal where a step-by-step assistant helps you upload your biography, professional headshot, brokerage logos, and active listings. Your brand-new responsive real estate site can go live in just a few clicks."
+          }
+        ]
+      }
+    },
+    "stripe": {
+      "title": "Add New Payment Method",
+      "submit_btn": "Submit",
+      "notifications": {
+        "error": "There was an error while subscribing"
+      }
+    }
+  }
+}

@@ -65,7 +65,7 @@ function handlePayFacError(error)
            <VCardText>
              <StripeCheckout
                  :client-secret="clientSecret"
-                 :stripe-pub-key="config.public.stripePubKey"
+                 :stripe-pub-key="config.public.stripePublishableKey"
                  :subscribe="subscribe"
                  :show-submit-btn="false"
                  @error-occurred="handlePayFacError($event)"

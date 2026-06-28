@@ -2,7 +2,9 @@ export default defineNuxtPlugin(async (nuxtApp) => {
     const tenant = useTenant()
 
     // 1. Get host name from request headers (SSR safe)
-    const host = useRequestHeaders(['host']).host || ''
+    // const host = useRequestHeaders(['host']).host || ''
+
+    const host ='brokeryhub.com'
 
     // 2. Derive a tenant key (e.g., extract 'bookisia' or 'brokeryhub')
     // In production, this might call a fast cache database like Redis or an internal API endpoint.

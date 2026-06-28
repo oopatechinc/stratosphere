@@ -19,6 +19,7 @@ class UserFetchManager extends AbstractFetchManager
      */
     public function apply()
     {
+        $this->query->with(['tenant.vertical.industry']);
         return $this;
     }
 }

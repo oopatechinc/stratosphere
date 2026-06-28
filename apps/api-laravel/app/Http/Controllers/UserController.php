@@ -21,6 +21,11 @@ class UserController extends Controller
         return $this->service->index();
     }
 
+    public function show(User $user): Model
+    {
+        return $this->service->show($user);
+    }
+
     public function store(StoreUserRequest $request): Model
     {
         return $this->service->store($request->validated());

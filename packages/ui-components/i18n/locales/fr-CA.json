@@ -1,0 +1,198 @@
+{
+  "shared_components_module": {
+    "pricing": {
+      "title": "Choisissez le forfait idéal pour votre entreprise",
+      "per_team_member": "Par membre de l'équipe",
+      "plans": {
+        "action_btn": "Commencer l'essai gratuit",
+        "teams_include_text": "Tout ce qui est inclus dans Solo, plus :",
+        "items": [
+          {
+            "name": "Solo",
+            "subtitle": "Pour les entreprises individuelles",
+            "price": "29,99 CA$",
+            "price_text": "par mois",
+            "text": "",
+            "features": [
+              "Page de réservation sur la place de marché",
+              "Site web de réservation d'entreprise",
+              "Réservations optimisées selon le fuseau horaire",
+              "Synchronisation des rendez-vous avec les calendriers",
+              "Connexion Stripe pour les paiements",
+              "Notifications par e-mail et SMS"
+            ]
+          },
+          {
+            "name": "Teams",
+            "subtitle": "Pour les équipes en pleine croissance",
+            "price": "19,99 CA$",
+            "price_text": "par membre de l'équipe et par mois",
+            "text": "",
+            "features": [
+              "Gestion du personnel",
+              "Horaires personnalisés pour chaque employé",
+              "Invitation de nouveaux collaborateurs",
+              "Calendrier personnalisé pour chaque employé",
+              "Possibilité pour le personnel d'utiliser son propre compte Stripe"
+            ]
+          },
+          {
+            "name": "Enterprise",
+            "subtitle": "Pour les grandes entreprises",
+            "price": "Tarifs personnalisés",
+            "price_text": "",
+            "caption": "",
+            "text": "Des solutions adaptées aux entreprises à fort volume comptant plus de 20 membres d'équipe",
+            "features": []
+          }
+        ]
+      },
+      "features": {
+        "title": "Fonctionnalités",
+        "plans": "Forfaits",
+        "solo": "Solo",
+        "teams": "Teams",
+        "items": [
+          {
+            "type": "header",
+            "name": "Planification",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Notifications par e-mail",
+            "description": "Vos clients recevront un rappel par e-mail en temps voulu pour leur prochain rendez-vous afin de minimiser les absences.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Réservations optimisées selon le fuseau horaire",
+            "description": "Les horaires de vos réservations seront automatiquement adaptés au fuseau horaire de l'emplacement de votre client.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Bloquer des pauses et du temps personnel",
+            "description": "Bloquez des créneaux horaires pour les moments où vous en avez besoin.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Notifications SMS",
+            "description": "Vos clients recevront un rappel par SMS en temps voulu pour leur prochain rendez-vous afin de minimiser les absences.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Horaires personnalisés pour chaque employé",
+            "description": "Vos employés ont la possibilité de personnaliser leurs propres heures d'ouverture et de fermeture disponibles.",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "header",
+            "name": "Réservations en ligne",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Site web de réservation",
+            "description": "Choisissez parmi une sélection de modèles de sites web conçus avec soin et personnalisez-les selon votre activité.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Page de réservation sur la place de marché",
+            "description": "Bénéficiez d'un référencement gratuit sur la place de marché Bookisia pour booster votre activité.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Synchronisation des rendez-vous avec les calendriers",
+            "description": "Lorsque vous intégrez Google Calendar, un nouvel événement est automatiquement ajouté dès que vos clients réservent vos services.",
+            "solo": true,
+            "team": true
+          },
+          {
+            "type": "header",
+            "name": "Outils administratifs",
+            "description": ""
+          },
+          {
+            "type": "feature",
+            "name": "Ajouter de nouveaux employés",
+            "description": "Les nouveaux employés ont accès à leur propre tableau de bord et peuvent gérer leurs horaires ainsi que leurs rendez-vous.",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Imposer les heures d'ouverture de l'entreprise au personnel",
+            "description": "Les membres du personnel peuvent modifier leurs heures d'ouverture, sauf restriction de la part de l'entreprise.",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Imposer un calendrier d'entreprise unique au personnel",
+            "description": "Les membres du personnel peuvent utiliser leur propre calendrier, sauf restriction de la part de l'entreprise.",
+            "solo": false,
+            "team": true
+          },
+          {
+            "type": "feature",
+            "name": "Tarification des services et durées par employé",
+            "description": "Les membres du personnel peuvent modifier leurs tarifs et les durées de leurs services, sauf restriction de la part de l'entreprise.",
+            "solo": false,
+            "team": true
+          }
+        ]
+      }
+    },
+    "faq": {
+      "title": "Foire aux questions",
+      "items": [
+        {
+          "question": "Puis-je changer de forfait (surclassement/déclassement) à tout moment ?",
+          "answer": "Oui, si vous estimez que votre entreprise bénéficierait des fonctionnalités d'un autre forfait ou si vous n'avez plus besoin de certaines options d'un forfait spécifique, vous pouvez changer de niveau à tout moment. Un montant proratisé vous sera facturé, calculé en fonction du nombre de jours passés sur votre forfait actuel et du temps restant sur le nouveau forfait avant votre prochaine période de facturation."
+        },
+        {
+          "question": "J'ai un problème, que dois-je faire ?",
+          "answer": "Notre équipe d'experts du service client est ravie de vous aider pour toutes vos questions. Vous pouvez nous appeler ou nous contacter à tout moment."
+        },
+        {
+          "question": "Puis-je suggérer une nouvelle fonctionnalité ?",
+          "answer": "Nous encourageons vivement nos clients à nous faire part de toute fonctionnalité qu'ils aimeraient voir sur notre plateforme. Nous améliorons activement nos services en y ajoutant de nouvelles options et nous accueillons toutes les suggestions de nos utilisateurs."
+        },
+        {
+          "question": "Combien de temps dure mon essai gratuit ?",
+          "answer": "Chaque forfait comprend un essai gratuit de 30 jours. Vous recevrez une notification trois jours avant l'expiration de votre essai. Nous accordons une grande importance à la transparence et nous vous informerons lorsque votre premier prélèvement sera sur le point d'avoir lieu. Une fois l'essai expiré, la facturation se fera automatiquement."
+        },
+        {
+          "question": "Je souhaite héberger ma boutique sur un domaine privé",
+          "answer": "Chaque entreprise inscrite sur Bookisia peut choisir d'héberger sa boutique sur son propre nom de domaine personnalisé. Contactez notre équipe d'assistance et nous lancerons le processus de configuration."
+        },
+        {
+          "question": "Je viens de souscrire à un nouveau forfait. Quelle est la suite ?",
+          "answer": "Félicitations ! Dirigez-vous vers votre propre portail administrateur. Vous pourrez y ajouter des informations sur votre entreprise, configurer votre personnel et définir vos horaires d'ouverture. Vous pouvez également importer vos éléments de marque, comme le logo de votre entreprise, afin qu'il s'affiche sur votre site web Bookisia."
+        }
+      ]
+    },
+    "dictionary": {
+      "month": "Mois"
+    },
+    "stripe": {
+      "title": "Ajouter un nouveau moyen de paiement",
+      "submit_btn": "Valider",
+      "notifications": {
+        "error": "Une erreur est survenue lors de la souscription"
+      }
+    }
+  }
+}

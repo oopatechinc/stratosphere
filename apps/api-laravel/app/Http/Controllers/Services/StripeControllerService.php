@@ -38,12 +38,12 @@ class StripeControllerService
         // create initial subscription
         Subscription::query()->updateOrCreate(
             [
-                'tenant_id' => auth()->user()->staff()->first()->tenant_id,
+                'tenant_id' => auth()->user()->tenant_id,
                 'user_id' => auth()->id(),
                 'payment_status' => $response->payment_status
             ],
             [
-                'tenant_id' => auth()->user()->staff()->first()->tenant_id,
+                'tenant_id' => auth()->user()->tenant_id,
                 'plan_id' => $plan->id,
                 'user_id' => auth()->id(),
                 'pay_fac_session_id' => $response->id,

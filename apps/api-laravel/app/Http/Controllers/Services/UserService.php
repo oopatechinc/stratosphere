@@ -16,6 +16,11 @@ class UserService implements ServiceContract
         return (new UserFetchManager())->apply()->get();
     }
 
+    public function show(User $user)
+    {
+        return (new UserFetchManager($user->id))->apply()->get();
+    }
+
     public function store(array $payload): Model
     {
         return User::query()->create($payload);

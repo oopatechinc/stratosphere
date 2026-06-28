@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const {business} = storeToRefs(useBusinessStore())
+const {tenant} = storeToRefs(useTenantStore())
 
 const paymentMethods = [
   {
@@ -37,7 +37,7 @@ const paymentMethods = [
         <VCol>
           <div class="mb-2">
             <VChip class="text-capitalize" color="primary">
-              {{business?.subscription?.plan?.name}}
+              {{tenant?.subscription?.plan?.name}}
             </VChip>
           </div>
           <NuxtLink to="#">
@@ -53,7 +53,7 @@ const paymentMethods = [
           <h4>CARD</h4>
         </VCol>
         <VCol class="d-flex flex-column justify-center">
-          <h2>${{business?.subscription?.total}}/{{$t('app.dictionary.month')}}</h2>
+          <h2>${{tenant?.subscription?.total}}/{{$t('app.dictionary.month')}}</h2>
         </VCol>
       </VRow>
 

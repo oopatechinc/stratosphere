@@ -9,9 +9,12 @@ export default defineNuxtPlugin((nuxtApp) => {
 
 
     const user = useSanctumUser<User>()
-    const isGetUserUrl = ctx.request.toString().includes('/user') && ctx.options.method === 'GET'
+    const isGetUserUrl = ctx.request.toString().includes('/user')
 
-    if (!isGetUserUrl && user.value?.tenant_id) {
+    const isCentralDBRequest = ctx.request.toString().includes('/user')
+        || ctx.request.toString().includes('stripe/create-checkout-session')
+
+    if (!isCentralDBRequest && user.value?.tenant_id) {
       ctx.options.headers.append('X-Tenant-ID', String(user.value?.tenant_id))
     }
   })

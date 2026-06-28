@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     ],
     runtimeConfig: {
         public: {
-            stripePubKey: import.meta.env.STRIPE_PUBLISHABLE_KEY,
+            stripePublishableKey: '',
             apiBaseUrl: import.meta.env.API_BASE_URL,
             indexedDBName: import.meta.env.INDEXED_DB_NAME,
             googleMapsApiKey: import.meta.env.GOOGLE_MAPS_API_KEY,
@@ -38,7 +38,7 @@ export default defineNuxtConfig({
         '@stratosphere/core-layer': resolve('../../packages/core-layer/app')
     },
     sanctum: {
-        baseUrl: 'https://api.oopatech.com/api',
+        baseUrl: import.meta.env.NUXT_PUBLIC_API_BASE_URL,
         endpoints: {
             login: '/auth/login',
             logout: '/auth/logout',

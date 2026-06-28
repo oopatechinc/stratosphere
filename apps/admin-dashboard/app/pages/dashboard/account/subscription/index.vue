@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import type {User} from "@stratosphere/core-layer/types";
+
 const localePath = useLocalePath()
+const user = useSanctumUser<User>()
 const {tenant} = storeToRefs(useTenantStore())
+const {fetchTenantById} = useTenantStore()
+await fetchTenantById(user.value!.tenant_id!)
 
 const hasExistingSubscription = computed(() => {
   return tenant.value?.subscription?.payment_status === 'paid'

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Helpers\Logit;
+
 use App\Traits\HasCalendarEvent;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Casts\Attribute;
@@ -35,8 +35,6 @@ class Tenant extends BaseTenant implements TenantWithDatabase
         'remaining_trial_period_days',
     ];
 
-
-
     public function remainingTrialPeriodDays(): Attribute
     {
         return Attribute::make(
@@ -61,7 +59,6 @@ class Tenant extends BaseTenant implements TenantWithDatabase
             'updated_at',
         ];
     }
-
 
     /*
      * Relationships
